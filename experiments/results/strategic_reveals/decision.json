@@ -1,0 +1,21 @@
+{
+  "report": "report.md",
+  "feature": "use_strategic_reveal",
+  "enabled_by_default": false,
+  "default_matches_current_level2": true,
+  "all_other_extras_enabled_by_default": false,
+  "charts": {
+    "AC": "fewest display copies, then fewest remaining missions, then random",
+    "BD": "cool desired high-EV future purchases; mission progress and supply tie breaks",
+    "E": "sign/size of quote change versus private expected value and future supply"
+  },
+  "benchmark_seeds": [
+    3000,
+    3299
+  ],
+  "games_per_policy_per_seat_count": 300,
+  "actual_games": 1800,
+  "performance_improvement_demonstrated": false,
+  "reason": "All aggregate paired margin and win-credit intervals include zero.",
+  "historical_workers_pinned": true
+}

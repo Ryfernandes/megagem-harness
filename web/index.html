@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#123f36" />
+    <meta
+      name="description"
+      content="A front-row seat to Megagem. Configure bots and watch real harness games, one sealed auction at a time."
+    />
+    <title>Megagem · Observatory</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Megagem home"
+        ><span class="brand-icon">◇</span> megagem</a
+      >
+      <div class="sidebar-heading">
+        <span class="eyebrow">THE OBSERVATORY</span>
+        <h1>
+          Good seats.<br />
+          Hidden hands.
+        </h1>
+        <p>Watch simple strategies meet<br />a surprisingly complex game.</p>
+      </div>
+      <form id="setup">
+        <div class="section-label">01 <span>BUILD YOUR TABLE</span></div>
+        <label id="seats-label">Number of seats</label>
+        <div
+          class="seat-toggle"
+          id="seat-toggle"
+          role="group"
+          aria-labelledby="seats-label"
+        >
+          <button type="button" data-seats="3">3</button
+          ><button type="button" class="selected" data-seats="4">4</button
+          ><button type="button" data-seats="5">5</button>
+        </div>
+        <div id="seat-fields"></div>
+        <div class="form-pair">
+          <div>
+            <label for="chart">Value chart</label
+            ><select id="chart">
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+            </select>
+          </div>
+          <div>
+            <label for="seed">Game seed</label
+            ><input
+              id="seed"
+              type="number"
+              min="0"
+              max="4294967295"
+              step="1"
+              value="42"
+              required
+            />
+          </div>
+        </div>
+        <button class="start" id="start" type="submit">
+          Start a new game <span>↗</span>
+        </button>
+        <p class="error" id="error" role="alert"></p>
+      </form>
+      <details class="strategy" open>
+        <summary>Meet the sampling bot <span>↗</span></summary>
+        <p>
+          Samples possible hidden hands and decks, then compares bids by playing
+          out games with valuation bots. Each sampled world gets equal weight.
+          Search has a time limit; short searches use the valuation policy.
+        </p>
+        <p>
+          Select “Sampling search · level 4”. Preparing a game takes longer;
+          results can vary with available search time.
+        </p>
+      </details>
+      <details class="strategy">
+        <summary>Meet the soft-tracking bot <span>↗</span></summary>
+        <p>
+          Matches the valuation bot at every seat count with all extras off.
+          Select it to switch on hand inference, mission endgame rules,
+          finance-aware cash planning, or a bid model that learns opponents'
+          cash fractions for each auction type. Strategic reveals adapt to the
+          chart: draw attention toward less useful colors on A/C, or try to cool
+          competition for desired colors on B/D. E checks whether the reveal
+          raises or lowers the displayed price. Cash planning uses remaining
+          loans, investments, and treasure auctions to adjust future cash needs.
+        </p>
+        <p>Select “Soft tracking · informed bids” in any seat to try it.</p>
+      </details>
+      <details class="strategy">
+        <summary>Meet the valuation bot <span>↗</span></summary>
+        <p>
+          Prices gems using expected final values and adds mission and denial
+          value. Uses expected-utility bids with all seat counts, balancing win
+          probability, price, and future cash needs. Keeps a cash reserve and
+          weighs investments and loans against future buying power.
+        </p>
+        <p>Select “Valuation · expected value” in any seat to try it.</p>
+      </details>
+      <details class="strategy">
+        <summary>Meet the fixed-rule bot <span>↗</span></summary>
+        <p>
+          20% of cash on treasure, rounded down. Zero on loans and investments.
+          Reveals its first hidden gem.
+        </p>
+        <p>
+          Missions are claimed automatically. A zero bid can still win a
+          financial card.
+        </p>
+      </details>
+      <div class="sidebar-foot">
+        <span class="live-dot"></span> Local simulation · Python harness
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <div class="eyebrow">A FRONT-ROW SEAT TO THE AUCTION</div>
+          <h2>The game table<span>.</span></h2>
+        </div>
+        <div class="status" id="status">Ready to play</div>
+      </header>
+      <div class="table-meta">
+        <span id="game-meta">4 seats · Chart A · Seed 42</span
+        ><span id="round-label">SETUP</span>
+      </div>
+      <section class="arena" aria-label="Auction table">
+        <div class="arena-top">
+          <span class="eyebrow light">ON THE TABLE</span
+          ><span id="remaining">— gems remaining</span>
+        </div>
+        <div class="auction-content" id="auction-content">
+          <div class="auction-kicker">TAKE YOUR SEAT</div>
+          <h3>Every gem has a price.<br />Every bot has a plan.</h3>
+          <p>Choose your players and start a game.</p>
+          <div class="intro-gems" aria-hidden="true">
+            <i class="gem g0"></i><i class="gem g1"></i><i class="gem g2"></i
+            ><i class="gem g3"></i><i class="gem g4"></i>
+          </div>
+        </div>
+        <div class="bid-strip" id="bids"></div>
+      </section>
+      <section class="transport" aria-label="Playback controls">
+        <div class="playback-buttons">
+          <button id="prev" aria-label="Previous round" disabled>⏮</button
+          ><button id="play" class="play" disabled>▶ Play</button
+          ><button id="next" aria-label="Next round" disabled>⏭</button>
+        </div>
+        <input
+          id="timeline"
+          aria-label="Game timeline"
+          type="range"
+          min="0"
+          max="1"
+          value="0"
+          disabled
+        /><span id="frame-label">0 / 0</span
+        ><select id="speed" aria-label="Playback speed">
+          <option value="2200">1× speed</option>
+          <option value="1100">2× speed</option>
+          <option value="550">4× speed</option>
+        </select>
+      </section>
+      <div class="section-title">
+        <h3>The players <span id="player-count">/ 04</span></h3>
+        <label class="spectator"
+          ><input type="checkbox" id="show-hands" /> Peek at hidden hands</label
+        >
+      </div>
+      <section class="players" id="players" aria-label="Players"></section>
+      <div class="lower-grid">
+        <section class="panel value-panel">
+          <div class="panel-title">
+            <h3>Market board</h3>
+            <span id="chart-label">CHART A</span>
+          </div>
+          <p class="muted">Revealed information sets the price per gem.</p>
+          <div id="market"></div>
+          <details class="chart-details">
+            <summary>View value chart</summary>
+            <table id="chart-table"></table>
+          </details>
+          <p class="fine">
+            Live values are provisional. All remaining hands are revealed before
+            final scoring.
+          </p>
+        </section>
+        <section class="panel missions-panel">
+          <div class="panel-title">
+            <h3>Mission race</h3>
+            <span>4 PER GAME</span>
+          </div>
+          <p class="muted">First to complete a set takes the reward.</p>
+          <div id="missions"></div>
+        </section>
+      </div>
+      <section class="panel history-panel">
+        <div class="panel-title">
+          <h3>Auction journal</h3>
+          <span id="journal-count">NO AUCTIONS YET</span>
+        </div>
+        <div id="journal">
+          <p class="muted">A play-by-play of every bid, reveal, and mission.</p>
+        </div>
+      </section>
+      <footer>
+        <span>MEGAGEM OBSERVATORY</span
+        ><span>Sealed bids. Open possibilities.</span>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "report": "report.md",
+  "default_matches_current_level2_at_counts": [
+    3,
+    4,
+    5
+  ],
+  "default_level3_extras": {
+    "use_bid_evidence": false,
+    "use_endgame_rules": false,
+    "use_finance_horizon": false
+  },
+  "shared_level2_behavior": {
+    "use_cash_limits": true,
+    "use_bid_model": true
+  },
+  "new_feature": "use_finance_horizon",
+  "enabled_by_default": false,
+  "performance_improvement_demonstrated": false,
+  "reason": "All paired win-credit and margin intervals include zero; keep optional/off.",
+  "comparison_seeds": [
+    2400,
+    2699
+  ],
+  "games_per_policy_per_seat_count": 300,
+  "opponents": "current ValuationBot",
+  "valuation_model_unchanged": true,
+  "financial_bids_unchanged": true,
+  "historical_ablation_workers_pinned": true
+}

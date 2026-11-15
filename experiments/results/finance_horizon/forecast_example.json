@@ -1,0 +1,25 @@
+{
+  "future_gems_after_current_lot": 13,
+  "remaining_cards": {
+    "one_gem": 11,
+    "two_gem": 5,
+    "loan_10": 2,
+    "loan_20": 2,
+    "invest_5": 2,
+    "invest_10": 2
+  },
+  "forecast": {
+    "min_treasure": 8,
+    "max_treasure": 12,
+    "expected_treasure": 10.01098901098901,
+    "min_rounds": 8,
+    "max_rounds": 20,
+    "expected_rounds": 14.722042663219131,
+    "expected_loans": 2.355526826115061,
+    "expected_investments": 2.355526826115061,
+    "expected_loan_coins": 35.332902391725916,
+    "timed_loan_coins": 19.4311570782159,
+    "timed_investment_coins": 9.71557853910795,
+    "timed_investments": 1.29541047188106
+  }
+}

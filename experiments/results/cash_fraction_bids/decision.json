@@ -1,0 +1,22 @@
+{
+  "report": "report.md",
+  "feature": "use_cash_fraction_model",
+  "enabled_by_default": false,
+  "all_other_level3_features_enabled_by_default": false,
+  "default_still_matches_level2": true,
+  "comparison_seeds": [
+    2700,
+    2999
+  ],
+  "games_per_policy_per_seat_count": 300,
+  "actual_benchmark_games": 2700,
+  "variants": [
+    "off",
+    "treasure_only",
+    "all_types"
+  ],
+  "opponents": "current ValuationBot",
+  "reason": "Treasure-only model harms margin at all counts; full model harms 3/4-player margin and is inconclusive at 5.",
+  "history_log": "observations.csv",
+  "parameters_frozen_before_comparison": true
+}

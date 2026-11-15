@@ -1,0 +1,53 @@
+{
+  "3": {
+    "games": 300,
+    "wins_including_ties": 36,
+    "win_credit": 35.0,
+    "win_rate": 0.11666666666666667,
+    "mean_score": 61.06333333333333,
+    "mean_margin": -23.54,
+    "paired_margin_delta": 4.003333333333333,
+    "paired_margin_ci_low": 1.9693978836345396,
+    "paired_margin_ci_high": 6.037268783032126,
+    "paired_score_delta": 3.1366666666666667,
+    "paired_score_ci_low": 1.9550825862597847,
+    "paired_score_ci_high": 4.318250747073549,
+    "paired_win_credit_delta": 0.025,
+    "paired_win_credit_ci_low": -0.011473551450426535,
+    "paired_win_credit_ci_high": 0.06147355145042654
+  },
+  "4": {
+    "games": 300,
+    "wins_including_ties": 49,
+    "win_credit": 48.0,
+    "win_rate": 0.16,
+    "mean_score": 44.74666666666667,
+    "mean_margin": -17.45,
+    "paired_margin_delta": 5.336666666666667,
+    "paired_margin_ci_low": 3.3027943869178302,
+    "paired_margin_ci_high": 7.370538946415504,
+    "paired_score_delta": 4.736666666666666,
+    "paired_score_ci_low": 3.534087200470859,
+    "paired_score_ci_high": 5.939246132862474,
+    "paired_win_credit_delta": 0.085,
+    "paired_win_credit_ci_low": 0.03985772127069765,
+    "paired_win_credit_ci_high": 0.13014227872930237
+  },
+  "5": {
+    "games": 300,
+    "wins_including_ties": 57,
+    "win_credit": 53.5,
+    "win_rate": 0.17833333333333334,
+    "mean_score": 39.5,
+    "mean_margin": -15.113333333333333,
+    "paired_margin_delta": 4.8,
+    "paired_margin_ci_low": 2.777604533047712,
+    "paired_margin_ci_high": 6.822395466952288,
+    "paired_score_delta": 3.81,
+    "paired_score_ci_low": 2.55452414795327,
+    "paired_score_ci_high": 5.06547585204673,
+    "paired_win_credit_delta": 0.06222222222222222,
+    "paired_win_credit_ci_low": 0.01573979040048698,
+    "paired_win_credit_ci_high": 0.10870465404395746
+  }
+}

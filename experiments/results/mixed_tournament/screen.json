@@ -1,0 +1,38 @@
+{
+  "stage": "screen",
+  "candidates": [
+    "L2",
+    "L3-I",
+    "L3-F",
+    "L3-R",
+    "L3-IF",
+    "L3-IR",
+    "L3-FR",
+    "L3-IFR",
+    "L4"
+  ],
+  "scenarios": [
+    "level2",
+    "level3",
+    "random",
+    "aggressive",
+    "passive",
+    "mixed_styles",
+    "mixed_experts"
+  ],
+  "charts": "ABCDE",
+  "seats": [
+    4
+  ],
+  "reps": 4,
+  "seed_base": 41000,
+  "jobs": 8,
+  "deadline": "2026-11-15T20:04:00+00:00",
+  "expected_games": 1260,
+  "complete_games": 1260,
+  "elapsed_seconds": 63.171902894973755,
+  "callback_errors": [],
+  "records_file": "screen.games.jsonl",
+  "complete_matrix": true,
+  "resumed_records": 1179
+}

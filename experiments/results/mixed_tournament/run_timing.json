@@ -1,0 +1,10 @@
+{
+  "session_start_utc": "2026-11-15T19:50:05+00:00",
+  "user_limit_seconds": 1200,
+  "testing_deadline_utc": "2026-11-15T20:08:00+00:00",
+  "testing_finished_utc": "2026-11-15T20:07:34.966642+00:00",
+  "testing_elapsed_from_session_start_seconds": 1049.966642,
+  "report_generated_utc": "2026-11-15T20:08:57.595894+00:00",
+  "elapsed_to_report_seconds": 1132.595894,
+  "testing_completed_before_deadline": true
+}

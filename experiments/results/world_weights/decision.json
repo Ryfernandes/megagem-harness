@@ -1,0 +1,27 @@
+{
+  "public_bot": "SamplingBot",
+  "world_weights": "uniform",
+  "tracker_required": false,
+  "weighted_control": "experiments.weighted_sampling_reference:WeightedSamplingReference",
+  "enabled_level3_extras": [],
+  "level2_policy_changed": false,
+  "level3_defaults_changed": false,
+  "report": "report.md",
+  "comparison_seeds": [
+    3600,
+    3659
+  ],
+  "games_per_policy_per_seat_count": 60,
+  "opponents": "current ValuationBot",
+  "practical_mean_point_loss_threshold": 3,
+  "uniform_lower_score_bound_above_negative_threshold_at_all_seat_counts": true,
+  "same_world_comparisons": 2841,
+  "same_world_action_disagreements": 12,
+  "callback_errors": [],
+  "retained_limits": {
+    "decision_seconds": 0.85,
+    "max_worlds": 16,
+    "max_candidates": 7
+  },
+  "interpretation": "No useful weighting advantage observed; uniform meets the predeclared practical-loss threshold at each count. This is not proof of exact equality or strength against every opponent."
+}

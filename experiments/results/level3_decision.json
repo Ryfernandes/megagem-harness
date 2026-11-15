@@ -1,0 +1,172 @@
+{
+  "selection_report": "level3_selection.json",
+  "validation_report": "level3_single_feature_holdout.json",
+  "selection_seeds": [
+    360,
+    599
+  ],
+  "validation_seeds": [
+    600,
+    839
+  ],
+  "selection_rule": "Higher fractional win rate and paired-margin 95% lower bound > 0; rank by win rate, margin, fewer flags.",
+  "selection_recommendation": "inference",
+  "validation_confirmed": false,
+  "adopted_variant": "baseline",
+  "adopted_flags": {
+    "inference": false,
+    "endgame": false,
+    "cash_limits": false,
+    "bid_model": false
+  },
+  "validation_candidate": {
+    "games": 240,
+    "wins_including_ties": 78,
+    "win_credit": 75.5,
+    "win_rate": 0.3145833333333333,
+    "mean_score": 73.20416666666667,
+    "mean_margin": -8.925,
+    "paired_margin_delta": 0.1875,
+    "paired_margin_ci_low": -0.4799918720350944,
+    "paired_margin_ci_high": 0.8549918720350944,
+    "paired_score_delta": 0.05416666666666667,
+    "paired_score_ci_low": -0.3867153039532104,
+    "paired_score_ci_high": 0.4950486372865438
+  },
+  "validation_control": {
+    "games": 240,
+    "wins_including_ties": 79,
+    "win_credit": 76.5,
+    "win_rate": 0.31875,
+    "mean_score": 73.15,
+    "mean_margin": -9.1125,
+    "paired_margin_delta": 0.0,
+    "paired_margin_ci_low": 0.0,
+    "paired_margin_ci_high": 0.0,
+    "paired_score_delta": 0.0,
+    "paired_score_ci_low": 0.0,
+    "paired_score_ci_high": 0.0
+  },
+  "interpretation": {
+    "inference": "Small selection gain did not replicate; disable as unproven.",
+    "endgame": "Negative paired margin on both seed blocks; disable.",
+    "cash_limits": "No standalone effect: level 2 already has legal caps. Conditions only bid_model.",
+    "bid_model": "Lower win credit and margin on held-out deals; disable."
+  },
+  "scope": "Three players: one candidate versus two ValuationBots, charts A-E, rotating seats. No claim of universal dominance.",
+  "tracker_forecast_diagnostic": {
+    "report": "tracker_predictions/report.md",
+    "fresh_seed_range": [
+      840,
+      1139
+    ],
+    "prediction_gate_passed": true,
+    "mse_relative_improvement_percent": 0.33677954489801387,
+    "strategy_gate_passed": false,
+    "bid_driving_inference_enabled": false,
+    "reason": "Small predictive improvement does not override failed held-out strategy validation."
+  },
+  "shrinkage_diagnostic": {
+    "report": "tracker_shrinkage/report.md",
+    "experimental_default_weight": 0.1,
+    "data_selected_weight": 0.4,
+    "shrinking_improved_over_legacy": false,
+    "bid_driving_inference_enabled": false,
+    "reason": "Smaller weights beat the prior but not the legacy tracker; no new strategy validation."
+  },
+  "expected_utility_followup": {
+    "report": "expected_utility/report.md",
+    "adopted_player_counts": [
+      3
+    ],
+    "k_scale": 1,
+    "k_floor": 0.5,
+    "inference_enabled": false,
+    "endgame_rules_enabled": false,
+    "historical_decision_above_preserved": true
+  },
+  "valuation_bidder_followup": {
+    "report": "valuation_expected_utility/report.md",
+    "public_valuation_uses_expected_utility": true,
+    "player_counts": [
+      3,
+      4,
+      5
+    ],
+    "historical_valuation_control": "FractionalValuationBot",
+    "soft_tracking_defaults_changed": false
+  },
+  "finance_horizon_followup": {
+    "report": "report.md",
+    "default_matches_current_level2_at_counts": [
+      3,
+      4,
+      5
+    ],
+    "default_level3_extras": {
+      "use_bid_evidence": false,
+      "use_endgame_rules": false,
+      "use_finance_horizon": false
+    },
+    "shared_level2_behavior": {
+      "use_cash_limits": true,
+      "use_bid_model": true
+    },
+    "new_feature": "use_finance_horizon",
+    "enabled_by_default": false,
+    "performance_improvement_demonstrated": false,
+    "reason": "All paired win-credit and margin intervals include zero; keep optional/off.",
+    "comparison_seeds": [
+      2400,
+      2699
+    ],
+    "games_per_policy_per_seat_count": 300,
+    "opponents": "current ValuationBot",
+    "valuation_model_unchanged": true,
+    "financial_bids_unchanged": true,
+    "historical_ablation_workers_pinned": true
+  },
+  "cash_fraction_model_followup": {
+    "report": "report.md",
+    "feature": "use_cash_fraction_model",
+    "enabled_by_default": false,
+    "all_other_level3_features_enabled_by_default": false,
+    "default_still_matches_level2": true,
+    "comparison_seeds": [
+      2700,
+      2999
+    ],
+    "games_per_policy_per_seat_count": 300,
+    "actual_benchmark_games": 2700,
+    "variants": [
+      "off",
+      "treasure_only",
+      "all_types"
+    ],
+    "opponents": "current ValuationBot",
+    "reason": "Treasure-only model harms margin at all counts; full model harms 3/4-player margin and is inconclusive at 5.",
+    "history_log": "observations.csv",
+    "parameters_frozen_before_comparison": true
+  },
+  "strategic_reveal_followup": {
+    "report": "report.md",
+    "feature": "use_strategic_reveal",
+    "enabled_by_default": false,
+    "default_matches_current_level2": true,
+    "all_other_extras_enabled_by_default": false,
+    "charts": {
+      "AC": "fewest display copies, then fewest remaining missions, then random",
+      "BD": "cool desired high-EV future purchases; mission progress and supply tie breaks",
+      "E": "sign/size of quote change versus private expected value and future supply"
+    },
+    "benchmark_seeds": [
+      3000,
+      3299
+    ],
+    "games_per_policy_per_seat_count": 300,
+    "actual_games": 1800,
+    "performance_improvement_demonstrated": false,
+    "reason": "All aggregate paired margin and win-credit intervals include zero.",
+    "historical_workers_pinned": true
+  }
+}

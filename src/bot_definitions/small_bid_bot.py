@@ -1,4 +1,11 @@
-"""A minimal stateful example; run with --bots custom_bots:SmallBidBot."""
+"""Development example, not a sprint submission.
+
+Bid one coin whenever affordable on every auction, while tracking games played
+and rounds seen. Run locally with --bots custom_bots:SmallBidBot.
+
+Contributors: Ryan Fernandes (original harness example), OpenAI Codex
+(documentation clarification).
+"""
 
 from bots import Bot, BotInfo, RoundResult
 

@@ -1,0 +1,46 @@
+{
+  "report": "report.md",
+  "public_bot": "SamplingBot",
+  "separate_option": true,
+  "level3_defaults_changed": false,
+  "enabled_level3_extras": {
+    "use_bid_evidence": true,
+    "evidence_weight": 0.1
+  },
+  "disabled_level3_extras": [
+    "use_endgame_rules",
+    "use_finance_horizon",
+    "use_cash_fraction_model",
+    "use_strategic_reveal"
+  ],
+  "objective": "importance-weighted mean own final coin score",
+  "search": {
+    "seconds": 0.85,
+    "max_worlds": 16,
+    "max_candidates": 7,
+    "min_worlds": 2,
+    "evidence_weight": 0.1
+  },
+  "score_improvement_interval_above_zero_seats": [
+    "3",
+    "4",
+    "5"
+  ],
+  "score_decline_interval_below_zero_seats": [],
+  "score_change_inconclusive_seats": [],
+  "benchmark_seeds": [
+    3300,
+    3359
+  ],
+  "games_per_policy_per_seat_count": 60,
+  "opponents": "current ValuationBot",
+  "callback_errors": [],
+  "deterministic_across_cpu_load": false,
+  "level2_policy_changed": false,
+  "excluded_runs": [
+    "invalid_cooperative_deadline",
+    "interrupted_process"
+  ],
+  "historical": true,
+  "superseded_by": "../world_weights/decision.json"
+}

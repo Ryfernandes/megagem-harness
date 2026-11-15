@@ -1,0 +1,28 @@
+{
+  "stage": "robustness",
+  "candidates": [
+    "L4",
+    "L2",
+    "L3-IR"
+  ],
+  "scenarios": [
+    "aggressive",
+    "mixed_experts"
+  ],
+  "charts": "ABCDE",
+  "seats": [
+    3,
+    5
+  ],
+  "reps": 1,
+  "seed_base": 401000,
+  "jobs": 8,
+  "deadline": "2026-11-15T20:08:00+00:00",
+  "expected_games": 60,
+  "complete_games": 60,
+  "elapsed_seconds": 56.42245650291443,
+  "callback_errors": [],
+  "records_file": "robustness.games.jsonl",
+  "complete_matrix": true,
+  "resumed_records": 0
+}

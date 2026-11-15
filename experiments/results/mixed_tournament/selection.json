@@ -1,0 +1,81 @@
+{
+  "generalist": "L4",
+  "specialists": [
+    {
+      "candidate": "L3-I",
+      "field": "scenario",
+      "value": "passive",
+      "screen_win_delta": 0.45,
+      "screen_margin_delta": 40.0,
+      "screen_win_rate": 0.75,
+      "positive_screen_win_edge": true
+    },
+    {
+      "candidate": "L3-IR",
+      "field": "chart",
+      "value": "C",
+      "screen_win_delta": 0.214285714286,
+      "screen_margin_delta": 10.321428571428571,
+      "screen_win_rate": 0.625,
+      "positive_screen_win_edge": true
+    }
+  ],
+  "generalist_ranking": [
+    {
+      "candidate": "L4",
+      "worst_group_win_rate": 0.275,
+      "win_rate": 0.492857142857,
+      "margin": 0.6571428571428571
+    },
+    {
+      "candidate": "L3-IR",
+      "worst_group_win_rate": 0.15,
+      "win_rate": 0.528571428571,
+      "margin": 7.357142857142857
+    },
+    {
+      "candidate": "L3-F",
+      "worst_group_win_rate": 0.141666666667,
+      "win_rate": 0.509523809524,
+      "margin": 6.242857142857143
+    },
+    {
+      "candidate": "L3-IF",
+      "worst_group_win_rate": 0.141666666667,
+      "win_rate": 0.509523809524,
+      "margin": 6.2214285714285715
+    },
+    {
+      "candidate": "L3-IFR",
+      "worst_group_win_rate": 0.1,
+      "win_rate": 0.521428571429,
+      "margin": 6.542857142857143
+    },
+    {
+      "candidate": "L3-FR",
+      "worst_group_win_rate": 0.05,
+      "win_rate": 0.514285714286,
+      "margin": 6.421428571428572
+    },
+    {
+      "candidate": "L2",
+      "worst_group_win_rate": 0.05,
+      "win_rate": 0.5,
+      "margin": 6.478571428571429
+    },
+    {
+      "candidate": "L3-I",
+      "worst_group_win_rate": 0.05,
+      "win_rate": 0.5,
+      "margin": 6.078571428571428
+    },
+    {
+      "candidate": "L3-R",
+      "worst_group_win_rate": 0,
+      "win_rate": 0.5,
+      "margin": 7.15
+    }
+  ],
+  "selection_only": true,
+  "validation_not_used_for_selection": true
+}

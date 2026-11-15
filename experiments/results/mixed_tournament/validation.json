@@ -1,0 +1,33 @@
+{
+  "stage": "validation",
+  "candidates": [
+    "L4",
+    "L3-I",
+    "L3-IR",
+    "L2"
+  ],
+  "scenarios": [
+    "level2",
+    "level3",
+    "random",
+    "aggressive",
+    "passive",
+    "mixed_styles",
+    "mixed_experts"
+  ],
+  "charts": "ABCDE",
+  "seats": [
+    4
+  ],
+  "reps": 2,
+  "seed_base": 201000,
+  "jobs": 8,
+  "deadline": "2026-11-15T20:08:00+00:00",
+  "expected_games": 280,
+  "complete_games": 280,
+  "elapsed_seconds": 182.57638025283813,
+  "callback_errors": [],
+  "records_file": "validation.games.jsonl",
+  "complete_matrix": true,
+  "resumed_records": 0
+}

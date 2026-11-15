@@ -1,0 +1,22 @@
+{
+  "generalist": "L4",
+  "specialists": [
+    {
+      "candidate": "L2",
+      "frozen_candidate": "L3-I",
+      "field": "scenario",
+      "value": "passive",
+      "simplified_to_L2": true
+    },
+    {
+      "candidate": "L3-IR",
+      "frozen_candidate": "L3-IR",
+      "field": "chart",
+      "value": "C",
+      "simplified_to_L2": false
+    }
+  ],
+  "frozen_selection": "selection.json",
+  "universal_dominance_proven": false,
+  "report": "report.md"
+}

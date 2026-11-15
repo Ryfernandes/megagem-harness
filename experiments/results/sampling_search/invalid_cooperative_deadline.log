@@ -1,0 +1,28 @@
+3 seats, level2: 16.50/60 win credit
+4 seats, level2: 16.50/60 win credit
+5 seats, level2: 16.00/60 win credit
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib64/python3.15/concurrent/futures/process.py", line 255, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/home/eightfive/megagem-harness/experiments/benchmark_sampling.py", line 70, in run
+    raise RuntimeError(f"Invalid benchmark: {errors.messages}")
+RuntimeError: Invalid benchmark: ['Player 0 (_MeasuredSamplingBot): get_bid: TimeoutError: Bot call exceeded its time budget']
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/eightfive/megagem-harness/experiments/benchmark_sampling.py", line 184, in <module>
+    main()
+    ~~~~^^
+  File "/home/eightfive/megagem-harness/experiments/benchmark_sampling.py", line 105, in main
+    results[n][name] = future.result()
+                       ~~~~~~~~~~~~~^^
+  File "/usr/lib64/python3.15/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib64/python3.15/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+RuntimeError: Invalid benchmark: ['Player 0 (_MeasuredSamplingBot): get_bid: TimeoutError: Bot call exceeded its time budget']

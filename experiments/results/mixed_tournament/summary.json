@@ -1,0 +1,1990 @@
+{
+  "selection": {
+    "generalist": "L4",
+    "specialists": [
+      {
+        "candidate": "L3-I",
+        "field": "scenario",
+        "value": "passive",
+        "screen_win_delta": 0.45,
+        "screen_margin_delta": 40.0,
+        "screen_win_rate": 0.75,
+        "positive_screen_win_edge": true
+      },
+      {
+        "candidate": "L3-IR",
+        "field": "chart",
+        "value": "C",
+        "screen_win_delta": 0.214285714286,
+        "screen_margin_delta": 10.321428571428571,
+        "screen_win_rate": 0.625,
+        "positive_screen_win_edge": true
+      }
+    ],
+    "generalist_ranking": [
+      {
+        "candidate": "L4",
+        "worst_group_win_rate": 0.275,
+        "win_rate": 0.492857142857,
+        "margin": 0.6571428571428571
+      },
+      {
+        "candidate": "L3-IR",
+        "worst_group_win_rate": 0.15,
+        "win_rate": 0.528571428571,
+        "margin": 7.357142857142857
+      },
+      {
+        "candidate": "L3-F",
+        "worst_group_win_rate": 0.141666666667,
+        "win_rate": 0.509523809524,
+        "margin": 6.242857142857143
+      },
+      {
+        "candidate": "L3-IF",
+        "worst_group_win_rate": 0.141666666667,
+        "win_rate": 0.509523809524,
+        "margin": 6.2214285714285715
+      },
+      {
+        "candidate": "L3-IFR",
+        "worst_group_win_rate": 0.1,
+        "win_rate": 0.521428571429,
+        "margin": 6.542857142857143
+      },
+      {
+        "candidate": "L3-FR",
+        "worst_group_win_rate": 0.05,
+        "win_rate": 0.514285714286,
+        "margin": 6.421428571428572
+      },
+      {
+        "candidate": "L2",
+        "worst_group_win_rate": 0.05,
+        "win_rate": 0.5,
+        "margin": 6.478571428571429
+      },
+      {
+        "candidate": "L3-I",
+        "worst_group_win_rate": 0.05,
+        "win_rate": 0.5,
+        "margin": 6.078571428571428
+      },
+      {
+        "candidate": "L3-R",
+        "worst_group_win_rate": 0,
+        "win_rate": 0.5,
+        "margin": 7.15
+      }
+    ],
+    "selection_only": true,
+    "validation_not_used_for_selection": true
+  },
+  "stages": {
+    "screen": {
+      "L3-F": {
+        "games": 140,
+        "wins": 71.33333333333333,
+        "win_rate": 0.5095238095238095,
+        "score": 64.30714285714286,
+        "margin": 6.242857142857143
+      },
+      "L3-R": {
+        "games": 140,
+        "wins": 70.0,
+        "win_rate": 0.5,
+        "score": 65.27142857142857,
+        "margin": 7.15
+      },
+      "L3-FR": {
+        "games": 140,
+        "wins": 72.0,
+        "win_rate": 0.5142857142857142,
+        "score": 64.94285714285714,
+        "margin": 6.421428571428572
+      },
+      "L3-IR": {
+        "games": 140,
+        "wins": 74.0,
+        "win_rate": 0.5285714285714286,
+        "score": 65.65,
+        "margin": 7.357142857142857
+      },
+      "L3-I": {
+        "games": 140,
+        "wins": 70.0,
+        "win_rate": 0.5,
+        "score": 64.73571428571428,
+        "margin": 6.078571428571428
+      },
+      "L4": {
+        "games": 140,
+        "wins": 69.0,
+        "win_rate": 0.4928571428571429,
+        "score": 61.25714285714286,
+        "margin": 0.6571428571428571
+      },
+      "L3-IF": {
+        "games": 140,
+        "wins": 71.33333333333333,
+        "win_rate": 0.5095238095238095,
+        "score": 64.6,
+        "margin": 6.2214285714285715
+      },
+      "L2": {
+        "games": 140,
+        "wins": 70.0,
+        "win_rate": 0.5,
+        "score": 64.76428571428572,
+        "margin": 6.478571428571429
+      },
+      "L3-IFR": {
+        "games": 140,
+        "wins": 73.0,
+        "win_rate": 0.5214285714285715,
+        "score": 65.08571428571429,
+        "margin": 6.542857142857143
+      }
+    },
+    "validation": {
+      "L2": {
+        "games": 70,
+        "wins": 38.0,
+        "win_rate": 0.5428571428571428,
+        "score": 61.57142857142857,
+        "margin": 4.9714285714285715
+      },
+      "L3-I": {
+        "games": 70,
+        "wins": 39.0,
+        "win_rate": 0.5571428571428572,
+        "score": 62,
+        "margin": 6.228571428571429
+      },
+      "L3-IR": {
+        "games": 70,
+        "wins": 39.0,
+        "win_rate": 0.5571428571428572,
+        "score": 62.642857142857146,
+        "margin": 6.685714285714286
+      },
+      "L4": {
+        "games": 70,
+        "wins": 38.0,
+        "win_rate": 0.5428571428571428,
+        "score": 61.55714285714286,
+        "margin": 5.071428571428571
+      }
+    },
+    "robustness": {
+      "L3-IR": {
+        "games": 20,
+        "wins": 12.0,
+        "win_rate": 0.6,
+        "score": 76.65,
+        "margin": 24.05
+      },
+      "L2": {
+        "games": 20,
+        "wins": 12.0,
+        "win_rate": 0.6,
+        "score": 75.15,
+        "margin": 22.4
+      },
+      "L4": {
+        "games": 20,
+        "wins": 13.0,
+        "win_rate": 0.65,
+        "score": 75.45,
+        "margin": 18.25
+      }
+    }
+  },
+  "comparisons": {
+    "screen": {
+      "generalist_vs_L2": {
+        "pairs": 140,
+        "candidate": "L4",
+        "reference": "L2",
+        "win_credit": {
+          "delta": -0.007142857142857143,
+          "ci_low": -0.12800201174770517,
+          "ci_high": 0.11371629746199088
+        },
+        "score": {
+          "delta": -3.507142857142857,
+          "ci_low": -8.63133204655818,
+          "ci_high": 1.6170463322724657
+        },
+        "margin": {
+          "delta": -5.821428571428571,
+          "ci_low": -13.941323944110989,
+          "ci_high": 2.2984668012538467
+        },
+        "candidate_summary": {
+          "games": 140,
+          "wins": 69.0,
+          "win_rate": 0.4928571428571429,
+          "score": 61.25714285714286,
+          "margin": 0.6571428571428571
+        },
+        "reference_summary": {
+          "games": 140,
+          "wins": 70.0,
+          "win_rate": 0.5,
+          "score": 64.76428571428572,
+          "margin": 6.478571428571429
+        }
+      },
+      "specialists": [
+        {
+          "pairs": 20,
+          "candidate": "L3-I",
+          "reference": "L4",
+          "win_credit": {
+            "delta": 0.45,
+            "ci_low": 0.22629954238571148,
+            "ci_high": 0.6737004576142885
+          },
+          "score": {
+            "delta": 30.1,
+            "ci_low": 21.531862746197397,
+            "ci_high": 38.668137253802605
+          },
+          "margin": {
+            "delta": 40,
+            "ci_low": 21.26174394453956,
+            "ci_high": 58.73825605546044
+          },
+          "candidate_summary": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23.3
+          },
+          "reference_summary": {
+            "games": 20,
+            "wins": 6.0,
+            "win_rate": 0.3,
+            "score": 63.85,
+            "margin": -16.7
+          }
+        },
+        {
+          "pairs": 28,
+          "candidate": "L3-IR",
+          "reference": "L4",
+          "win_credit": {
+            "delta": 0.21428571428571427,
+            "ci_low": -0.07275538484922248,
+            "ci_high": 0.501326813420651
+          },
+          "score": {
+            "delta": 6.964285714285714,
+            "ci_low": -1.5245485641890033,
+            "ci_high": 15.453119992760431
+          },
+          "margin": {
+            "delta": 10.321428571428571,
+            "ci_low": -2.7906799122932178,
+            "ci_high": 23.43353705515036
+          },
+          "candidate_summary": {
+            "games": 28,
+            "wins": 17.5,
+            "win_rate": 0.625,
+            "score": 58.357142857142854,
+            "margin": 8.321428571428571
+          },
+          "reference_summary": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 51.392857142857146,
+            "margin": -2
+          }
+        }
+      ],
+      "specialists_vs_L2": [
+        {
+          "pairs": 20,
+          "candidate": "L3-I",
+          "reference": "L2",
+          "win_credit": {
+            "delta": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "score": {
+            "delta": 0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "margin": {
+            "delta": 0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "candidate_summary": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23.3
+          },
+          "reference_summary": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23.3
+          }
+        },
+        {
+          "pairs": 28,
+          "candidate": "L3-IR",
+          "reference": "L2",
+          "win_credit": {
+            "delta": 0.017857142857142856,
+            "ci_low": -0.0888572561851746,
+            "ci_high": 0.12457154189946029
+          },
+          "score": {
+            "delta": -0.10714285714285714,
+            "ci_low": -2.7016234659795524,
+            "ci_high": 2.487337751693838
+          },
+          "margin": {
+            "delta": -0.07142857142857142,
+            "ci_low": -3.356598390591767,
+            "ci_high": 3.2137412477346237
+          },
+          "candidate_summary": {
+            "games": 28,
+            "wins": 17.5,
+            "win_rate": 0.625,
+            "score": 58.357142857142854,
+            "margin": 8.321428571428571
+          },
+          "reference_summary": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 58.464285714285715,
+            "margin": 8.392857142857142
+          }
+        }
+      ],
+      "by_chart": {
+        "L3-F": {
+          "E": {
+            "games": 28,
+            "wins": 12.0,
+            "win_rate": 0.42857142857142855,
+            "score": 69.32142857142857,
+            "margin": 4.678571428571429
+          },
+          "A": {
+            "games": 28,
+            "wins": 15.0,
+            "win_rate": 0.5357142857142857,
+            "score": 70.67857142857143,
+            "margin": 9.75
+          },
+          "B": {
+            "games": 28,
+            "wins": 13.0,
+            "win_rate": 0.4642857142857143,
+            "score": 57,
+            "margin": 4.178571428571429
+          },
+          "D": {
+            "games": 28,
+            "wins": 14.0,
+            "win_rate": 0.5,
+            "score": 66.21428571428571,
+            "margin": 3.392857142857143
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.333333333333332,
+            "win_rate": 0.6190476190476191,
+            "score": 58.32142857142857,
+            "margin": 9.214285714285714
+          }
+        },
+        "L3-R": {
+          "D": {
+            "games": 28,
+            "wins": 14.5,
+            "win_rate": 0.5178571428571429,
+            "score": 69.53571428571429,
+            "margin": 7.178571428571429
+          },
+          "E": {
+            "games": 28,
+            "wins": 11.0,
+            "win_rate": 0.39285714285714285,
+            "score": 70.28571428571429,
+            "margin": 5.892857142857143
+          },
+          "A": {
+            "games": 28,
+            "wins": 16.0,
+            "win_rate": 0.5714285714285714,
+            "score": 71.96428571428571,
+            "margin": 11.428571428571429
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 58.107142857142854,
+            "margin": 8.5
+          },
+          "B": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 56.464285714285715,
+            "margin": 2.75
+          }
+        },
+        "L3-FR": {
+          "D": {
+            "games": 28,
+            "wins": 16.5,
+            "win_rate": 0.5892857142857143,
+            "score": 70.07142857142857,
+            "margin": 7.678571428571429
+          },
+          "E": {
+            "games": 28,
+            "wins": 12.0,
+            "win_rate": 0.42857142857142855,
+            "score": 68.28571428571429,
+            "margin": 2.6785714285714284
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 57.67857142857143,
+            "margin": 7.535714285714286
+          },
+          "A": {
+            "games": 28,
+            "wins": 15.0,
+            "win_rate": 0.5357142857142857,
+            "score": 71.67857142857143,
+            "margin": 10.607142857142858
+          },
+          "B": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 57,
+            "margin": 3.607142857142857
+          }
+        },
+        "L3-IR": {
+          "E": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 71.03571428571429,
+            "margin": 6.25
+          },
+          "A": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 72.46428571428571,
+            "margin": 11.428571428571429
+          },
+          "B": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 55.82142857142857,
+            "margin": 2.0357142857142856
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.5,
+            "win_rate": 0.625,
+            "score": 58.357142857142854,
+            "margin": 8.321428571428571
+          },
+          "D": {
+            "games": 28,
+            "wins": 16.5,
+            "win_rate": 0.5892857142857143,
+            "score": 70.57142857142857,
+            "margin": 8.75
+          }
+        },
+        "L3-I": {
+          "E": {
+            "games": 28,
+            "wins": 12.0,
+            "win_rate": 0.42857142857142855,
+            "score": 70.85714285714286,
+            "margin": 5.357142857142857
+          },
+          "D": {
+            "games": 28,
+            "wins": 13.0,
+            "win_rate": 0.4642857142857143,
+            "score": 66.82142857142857,
+            "margin": 3.25
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 58.214285714285715,
+            "margin": 8.035714285714286
+          },
+          "A": {
+            "games": 28,
+            "wins": 16.0,
+            "win_rate": 0.5714285714285714,
+            "score": 71.89285714285714,
+            "margin": 10.571428571428571
+          },
+          "B": {
+            "games": 28,
+            "wins": 12.0,
+            "win_rate": 0.42857142857142855,
+            "score": 55.892857142857146,
+            "margin": 3.1785714285714284
+          }
+        },
+        "L4": {
+          "D": {
+            "games": 28,
+            "wins": 15.5,
+            "win_rate": 0.5535714285714286,
+            "score": 71.75,
+            "margin": 9.535714285714286
+          },
+          "C": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 51.392857142857146,
+            "margin": -2
+          },
+          "B": {
+            "games": 28,
+            "wins": 16.0,
+            "win_rate": 0.5714285714285714,
+            "score": 56,
+            "margin": 4.464285714285714
+          },
+          "A": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 65.71428571428571,
+            "margin": 1.4642857142857142
+          },
+          "E": {
+            "games": 28,
+            "wins": 9.0,
+            "win_rate": 0.32142857142857145,
+            "score": 61.42857142857143,
+            "margin": -10.178571428571429
+          }
+        },
+        "L3-IF": {
+          "A": {
+            "games": 28,
+            "wins": 16.0,
+            "win_rate": 0.5714285714285714,
+            "score": 72.03571428571429,
+            "margin": 11.821428571428571
+          },
+          "D": {
+            "games": 28,
+            "wins": 14.0,
+            "win_rate": 0.5,
+            "score": 66.71428571428571,
+            "margin": 4.035714285714286
+          },
+          "E": {
+            "games": 28,
+            "wins": 11.0,
+            "win_rate": 0.39285714285714285,
+            "score": 68.85714285714286,
+            "margin": 3.0714285714285716
+          },
+          "B": {
+            "games": 28,
+            "wins": 13.0,
+            "win_rate": 0.4642857142857143,
+            "score": 57.17857142857143,
+            "margin": 4.357142857142857
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.333333333333332,
+            "win_rate": 0.6190476190476191,
+            "score": 58.214285714285715,
+            "margin": 7.821428571428571
+          }
+        },
+        "L2": {
+          "B": {
+            "games": 28,
+            "wins": 12.0,
+            "win_rate": 0.42857142857142855,
+            "score": 57.07142857142857,
+            "margin": 4.321428571428571
+          },
+          "E": {
+            "games": 28,
+            "wins": 11.0,
+            "win_rate": 0.39285714285714285,
+            "score": 70.71428571428571,
+            "margin": 5.964285714285714
+          },
+          "A": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 72.14285714285714,
+            "margin": 11.464285714285714
+          },
+          "D": {
+            "games": 28,
+            "wins": 13.0,
+            "win_rate": 0.4642857142857143,
+            "score": 65.42857142857143,
+            "margin": 2.25
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 58.464285714285715,
+            "margin": 8.392857142857142
+          }
+        },
+        "L3-IFR": {
+          "B": {
+            "games": 28,
+            "wins": 11.5,
+            "win_rate": 0.4107142857142857,
+            "score": 56.892857142857146,
+            "margin": 3.5
+          },
+          "D": {
+            "games": 28,
+            "wins": 16.5,
+            "win_rate": 0.5892857142857143,
+            "score": 70.17857142857143,
+            "margin": 7.642857142857143
+          },
+          "A": {
+            "games": 28,
+            "wins": 16.0,
+            "win_rate": 0.5714285714285714,
+            "score": 72.03571428571429,
+            "margin": 11.142857142857142
+          },
+          "C": {
+            "games": 28,
+            "wins": 17.0,
+            "win_rate": 0.6071428571428571,
+            "score": 57.67857142857143,
+            "margin": 7.535714285714286
+          },
+          "E": {
+            "games": 28,
+            "wins": 12.0,
+            "win_rate": 0.42857142857142855,
+            "score": 68.64285714285714,
+            "margin": 2.892857142857143
+          }
+        }
+      },
+      "by_opponent": {
+        "L3-F": {
+          "mixed_styles": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 72.1,
+            "margin": 15.7
+          },
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 90.85,
+            "margin": 51.45
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 3.0,
+            "win_rate": 0.15,
+            "score": 41.35,
+            "margin": -30.1
+          },
+          "level2": {
+            "games": 20,
+            "wins": 5.0,
+            "win_rate": 0.25,
+            "score": 42.85,
+            "margin": -13.05
+          },
+          "level3": {
+            "games": 20,
+            "wins": 2.8333333333333335,
+            "win_rate": 0.14166666666666666,
+            "score": 44.75,
+            "margin": -13.7
+          },
+          "random": {
+            "games": 20,
+            "wins": 12.5,
+            "win_rate": 0.625,
+            "score": 65.3,
+            "margin": 11.45
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 92.95,
+            "margin": 21.95
+          }
+        },
+        "L3-R": {
+          "random": {
+            "games": 20,
+            "wins": 13.0,
+            "win_rate": 0.65,
+            "score": 66.7,
+            "margin": 13.65
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23
+          },
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 91.3,
+            "margin": 52.05
+          },
+          "level2": {
+            "games": 20,
+            "wins": 5.0,
+            "win_rate": 0.25,
+            "score": 45.05,
+            "margin": -9.95
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 0,
+            "win_rate": 0,
+            "score": 42.65,
+            "margin": -30.7
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 16.0,
+            "win_rate": 0.8,
+            "score": 72.35,
+            "margin": 16.65
+          },
+          "level3": {
+            "games": 20,
+            "wins": 3.0,
+            "win_rate": 0.15,
+            "score": 44.9,
+            "margin": -14.65
+          }
+        },
+        "L3-FR": {
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 92.05,
+            "margin": 52.95
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 16.0,
+            "win_rate": 0.8,
+            "score": 73.2,
+            "margin": 17.5
+          },
+          "random": {
+            "games": 20,
+            "wins": 13.0,
+            "win_rate": 0.65,
+            "score": 66.15,
+            "margin": 13.05
+          },
+          "level2": {
+            "games": 20,
+            "wins": 4.0,
+            "win_rate": 0.2,
+            "score": 43.45,
+            "margin": -13.05
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 1.0,
+            "win_rate": 0.05,
+            "score": 40.65,
+            "margin": -35.2
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 92.95,
+            "margin": 21.65
+          },
+          "level3": {
+            "games": 20,
+            "wins": 5.0,
+            "win_rate": 0.25,
+            "score": 46.15,
+            "margin": -11.95
+          }
+        },
+        "L3-IR": {
+          "level3": {
+            "games": 20,
+            "wins": 3.0,
+            "win_rate": 0.15,
+            "score": 44.9,
+            "margin": -14.65
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 4.0,
+            "win_rate": 0.2,
+            "score": 44.5,
+            "margin": -30.05
+          },
+          "random": {
+            "games": 20,
+            "wins": 13.0,
+            "win_rate": 0.65,
+            "score": 66.7,
+            "margin": 13.65
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 16.0,
+            "win_rate": 0.8,
+            "score": 72.35,
+            "margin": 16.65
+          },
+          "level2": {
+            "games": 20,
+            "wins": 5.0,
+            "win_rate": 0.25,
+            "score": 45.85,
+            "margin": -9.15
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23
+          },
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 91.3,
+            "margin": 52.05
+          }
+        },
+        "L3-I": {
+          "level2": {
+            "games": 20,
+            "wins": 6.0,
+            "win_rate": 0.3,
+            "score": 45.8,
+            "margin": -9.95
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 71.25,
+            "margin": 14.85
+          },
+          "level3": {
+            "games": 20,
+            "wins": 2.5,
+            "win_rate": 0.125,
+            "score": 44.25,
+            "margin": -14.8
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 1.0,
+            "win_rate": 0.05,
+            "score": 41.65,
+            "margin": -33.9
+          },
+          "random": {
+            "games": 20,
+            "wins": 12.5,
+            "win_rate": 0.625,
+            "score": 65.85,
+            "margin": 12.05
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23.3
+          },
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 90.4,
+            "margin": 51
+          }
+        },
+        "L4": {
+          "aggressive": {
+            "games": 20,
+            "wins": 9.5,
+            "win_rate": 0.475,
+            "score": 64.6,
+            "margin": 5.5
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 7.0,
+            "win_rate": 0.35,
+            "score": 54.95,
+            "margin": -7.7
+          },
+          "level3": {
+            "games": 20,
+            "wins": 17.0,
+            "win_rate": 0.85,
+            "score": 66.45,
+            "margin": 18.65
+          },
+          "level2": {
+            "games": 20,
+            "wins": 17.0,
+            "win_rate": 0.85,
+            "score": 70.75,
+            "margin": 25.8
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 7.0,
+            "win_rate": 0.35,
+            "score": 55.55,
+            "margin": -9.7
+          },
+          "passive": {
+            "games": 20,
+            "wins": 6.0,
+            "win_rate": 0.3,
+            "score": 63.85,
+            "margin": -16.7
+          },
+          "random": {
+            "games": 20,
+            "wins": 5.5,
+            "win_rate": 0.275,
+            "score": 52.65,
+            "margin": -11.25
+          }
+        },
+        "L3-IF": {
+          "mixed_experts": {
+            "games": 20,
+            "wins": 3.0,
+            "win_rate": 0.15,
+            "score": 43.45,
+            "margin": -30.2
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 92.95,
+            "margin": 21.95
+          },
+          "level3": {
+            "games": 20,
+            "wins": 2.8333333333333335,
+            "win_rate": 0.14166666666666666,
+            "score": 44.75,
+            "margin": -13.7
+          },
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 90.85,
+            "margin": 51.45
+          },
+          "random": {
+            "games": 20,
+            "wins": 12.5,
+            "win_rate": 0.625,
+            "score": 65.25,
+            "margin": 11.4
+          },
+          "level2": {
+            "games": 20,
+            "wins": 5.0,
+            "win_rate": 0.25,
+            "score": 42.85,
+            "margin": -13.05
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 72.1,
+            "margin": 15.7
+          }
+        },
+        "L2": {
+          "mixed_experts": {
+            "games": 20,
+            "wins": 1.0,
+            "win_rate": 0.05,
+            "score": 43.15,
+            "margin": -30.3
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 71.25,
+            "margin": 14.85
+          },
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 90.4,
+            "margin": 51
+          },
+          "level2": {
+            "games": 20,
+            "wins": 6.0,
+            "win_rate": 0.3,
+            "score": 44.5,
+            "margin": -10.75
+          },
+          "level3": {
+            "games": 20,
+            "wins": 2.5,
+            "win_rate": 0.125,
+            "score": 44.25,
+            "margin": -14.8
+          },
+          "random": {
+            "games": 20,
+            "wins": 12.5,
+            "win_rate": 0.625,
+            "score": 65.85,
+            "margin": 12.05
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 93.95,
+            "margin": 23.3
+          }
+        },
+        "L3-IFR": {
+          "aggressive": {
+            "games": 20,
+            "wins": 18.0,
+            "win_rate": 0.9,
+            "score": 92.05,
+            "margin": 52.95
+          },
+          "level3": {
+            "games": 20,
+            "wins": 5.0,
+            "win_rate": 0.25,
+            "score": 46.1,
+            "margin": -11.55
+          },
+          "random": {
+            "games": 20,
+            "wins": 13.0,
+            "win_rate": 0.65,
+            "score": 66.05,
+            "margin": 12.95
+          },
+          "level2": {
+            "games": 20,
+            "wins": 4.0,
+            "win_rate": 0.2,
+            "score": 43.45,
+            "margin": -13.05
+          },
+          "mixed_experts": {
+            "games": 20,
+            "wins": 2.0,
+            "win_rate": 0.1,
+            "score": 41.8,
+            "margin": -34.65
+          },
+          "passive": {
+            "games": 20,
+            "wins": 15.0,
+            "win_rate": 0.75,
+            "score": 92.95,
+            "margin": 21.65
+          },
+          "mixed_styles": {
+            "games": 20,
+            "wins": 16.0,
+            "win_rate": 0.8,
+            "score": 73.2,
+            "margin": 17.5
+          }
+        }
+      }
+    },
+    "validation": {
+      "generalist_vs_L2": {
+        "pairs": 70,
+        "candidate": "L4",
+        "reference": "L2",
+        "win_credit": {
+          "delta": 0.0,
+          "ci_low": -0.18277094241510147,
+          "ci_high": 0.18277094241510147
+        },
+        "score": {
+          "delta": -0.014285714285714285,
+          "ci_low": -7.1931080471587405,
+          "ci_high": 7.164536618587312
+        },
+        "margin": {
+          "delta": 0.1,
+          "ci_low": -10.993756008530726,
+          "ci_high": 11.193756008530725
+        },
+        "candidate_summary": {
+          "games": 70,
+          "wins": 38.0,
+          "win_rate": 0.5428571428571428,
+          "score": 61.55714285714286,
+          "margin": 5.071428571428571
+        },
+        "reference_summary": {
+          "games": 70,
+          "wins": 38.0,
+          "win_rate": 0.5428571428571428,
+          "score": 61.57142857142857,
+          "margin": 4.9714285714285715
+        }
+      },
+      "specialists": [
+        {
+          "pairs": 10,
+          "candidate": "L3-I",
+          "reference": "L4",
+          "win_credit": {
+            "delta": 0.4,
+            "ci_low": 0.07993334027633142,
+            "ci_high": 0.7200666597236687
+          },
+          "score": {
+            "delta": 27.6,
+            "ci_low": 16.523350366148115,
+            "ci_high": 38.67664963385189
+          },
+          "margin": {
+            "delta": 37,
+            "ci_low": 19.988223686712395,
+            "ci_high": 54.011776313287605
+          },
+          "candidate_summary": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 97,
+            "margin": 28.4
+          },
+          "reference_summary": {
+            "games": 10,
+            "wins": 4.0,
+            "win_rate": 0.4,
+            "score": 69.4,
+            "margin": -8.6
+          }
+        },
+        {
+          "pairs": 14,
+          "candidate": "L3-IR",
+          "reference": "L4",
+          "win_credit": {
+            "delta": 0.0,
+            "ci_low": -0.41092765599499204,
+            "ci_high": 0.41092765599499204
+          },
+          "score": {
+            "delta": 3.357142857142857,
+            "ci_low": -7.878943239413664,
+            "ci_high": 14.593228953699379
+          },
+          "margin": {
+            "delta": 3.357142857142857,
+            "ci_low": -12.986735789946064,
+            "ci_high": 19.70102150423178
+          },
+          "candidate_summary": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 55.92857142857143,
+            "margin": 4.428571428571429
+          },
+          "reference_summary": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 52.57142857142857,
+            "margin": 1.0714285714285714
+          }
+        }
+      ],
+      "specialists_vs_L2": [
+        {
+          "pairs": 10,
+          "candidate": "L3-I",
+          "reference": "L2",
+          "win_credit": {
+            "delta": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "score": {
+            "delta": 0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "margin": {
+            "delta": 0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "candidate_summary": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 97,
+            "margin": 28.4
+          },
+          "reference_summary": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 97,
+            "margin": 28.4
+          }
+        },
+        {
+          "pairs": 14,
+          "candidate": "L3-IR",
+          "reference": "L2",
+          "win_credit": {
+            "delta": 0.07142857142857142,
+            "ci_low": -0.06857142857142859,
+            "ci_high": 0.21142857142857144
+          },
+          "score": {
+            "delta": 0.07142857142857142,
+            "ci_low": -0.5932170831527597,
+            "ci_high": 0.7360742260099025
+          },
+          "margin": {
+            "delta": -0.14285714285714285,
+            "ci_low": -1.2655462223581277,
+            "ci_high": 0.9798319366438422
+          },
+          "candidate_summary": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 55.92857142857143,
+            "margin": 4.428571428571429
+          },
+          "reference_summary": {
+            "games": 14,
+            "wins": 6.0,
+            "win_rate": 0.42857142857142855,
+            "score": 55.857142857142854,
+            "margin": 4.571428571428571
+          }
+        }
+      ],
+      "by_chart": {
+        "L2": {
+          "C": {
+            "games": 14,
+            "wins": 6.0,
+            "win_rate": 0.42857142857142855,
+            "score": 55.857142857142854,
+            "margin": 4.571428571428571
+          },
+          "E": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 62.142857142857146,
+            "margin": 0.5
+          },
+          "D": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 64.14285714285714,
+            "margin": 4.142857142857143
+          },
+          "B": {
+            "games": 14,
+            "wins": 9.0,
+            "win_rate": 0.6428571428571429,
+            "score": 57.5,
+            "margin": 11.357142857142858
+          },
+          "A": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 68.21428571428571,
+            "margin": 4.285714285714286
+          }
+        },
+        "L3-I": {
+          "C": {
+            "games": 14,
+            "wins": 6.0,
+            "win_rate": 0.42857142857142855,
+            "score": 55.785714285714285,
+            "margin": 4.142857142857143
+          },
+          "E": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 62.142857142857146,
+            "margin": 0.6428571428571429
+          },
+          "B": {
+            "games": 14,
+            "wins": 9.0,
+            "win_rate": 0.6428571428571429,
+            "score": 57.714285714285715,
+            "margin": 11.928571428571429
+          },
+          "D": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 64.5,
+            "margin": 5.5
+          },
+          "A": {
+            "games": 14,
+            "wins": 9.0,
+            "win_rate": 0.6428571428571429,
+            "score": 69.85714285714286,
+            "margin": 8.928571428571429
+          }
+        },
+        "L3-IR": {
+          "D": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 66.28571428571429,
+            "margin": 6.928571428571429
+          },
+          "E": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 65.07142857142857,
+            "margin": 4.785714285714286
+          },
+          "B": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 57.07142857142857,
+            "margin": 10.642857142857142
+          },
+          "C": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 55.92857142857143,
+            "margin": 4.428571428571429
+          },
+          "A": {
+            "games": 14,
+            "wins": 8.0,
+            "win_rate": 0.5714285714285714,
+            "score": 68.85714285714286,
+            "margin": 6.642857142857143
+          }
+        },
+        "L4": {
+          "A": {
+            "games": 14,
+            "wins": 6.0,
+            "win_rate": 0.42857142857142855,
+            "score": 61.857142857142854,
+            "margin": 1.5
+          },
+          "C": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 52.57142857142857,
+            "margin": 1.0714285714285714
+          },
+          "E": {
+            "games": 14,
+            "wins": 9.0,
+            "win_rate": 0.6428571428571429,
+            "score": 70.14285714285714,
+            "margin": 10.642857142857142
+          },
+          "B": {
+            "games": 14,
+            "wins": 9.0,
+            "win_rate": 0.6428571428571429,
+            "score": 58.714285714285715,
+            "margin": 7.857142857142857
+          },
+          "D": {
+            "games": 14,
+            "wins": 7.0,
+            "win_rate": 0.5,
+            "score": 64.5,
+            "margin": 4.285714285714286
+          }
+        }
+      },
+      "by_opponent": {
+        "L2": {
+          "aggressive": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 71.7,
+            "margin": 31.8
+          },
+          "level2": {
+            "games": 10,
+            "wins": 0,
+            "win_rate": 0,
+            "score": 39.5,
+            "margin": -22.7
+          },
+          "random": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 65.7,
+            "margin": 14.5
+          },
+          "mixed_styles": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 74.8,
+            "margin": 27.1
+          },
+          "level3": {
+            "games": 10,
+            "wins": 1.0,
+            "win_rate": 0.1,
+            "score": 44.8,
+            "margin": -16.5
+          },
+          "passive": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 97,
+            "margin": 28.4
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 1.0,
+            "win_rate": 0.1,
+            "score": 37.5,
+            "margin": -27.8
+          }
+        },
+        "L3-I": {
+          "level2": {
+            "games": 10,
+            "wins": 0,
+            "win_rate": 0,
+            "score": 39.5,
+            "margin": -22.7
+          },
+          "passive": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 97,
+            "margin": 28.4
+          },
+          "level3": {
+            "games": 10,
+            "wins": 2.0,
+            "win_rate": 0.2,
+            "score": 47.1,
+            "margin": -10.2
+          },
+          "aggressive": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 71.7,
+            "margin": 31.8
+          },
+          "mixed_styles": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 74.8,
+            "margin": 27.1
+          },
+          "random": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 65.7,
+            "margin": 14.5
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 1.0,
+            "win_rate": 0.1,
+            "score": 38.2,
+            "margin": -25.3
+          }
+        },
+        "L3-IR": {
+          "level3": {
+            "games": 10,
+            "wins": 2.0,
+            "win_rate": 0.2,
+            "score": 48.5,
+            "margin": -9.3
+          },
+          "level2": {
+            "games": 10,
+            "wins": 0,
+            "win_rate": 0,
+            "score": 45,
+            "margin": -16.4
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 1.0,
+            "win_rate": 0.1,
+            "score": 37.1,
+            "margin": -27.9
+          },
+          "passive": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 97,
+            "margin": 28.4
+          },
+          "random": {
+            "games": 10,
+            "wins": 8.0,
+            "win_rate": 0.8,
+            "score": 64.4,
+            "margin": 13.7
+          },
+          "aggressive": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 71.7,
+            "margin": 31.2
+          },
+          "mixed_styles": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 74.8,
+            "margin": 27.1
+          }
+        },
+        "L4": {
+          "passive": {
+            "games": 10,
+            "wins": 4.0,
+            "win_rate": 0.4,
+            "score": 69.4,
+            "margin": -8.6
+          },
+          "aggressive": {
+            "games": 10,
+            "wins": 5.0,
+            "win_rate": 0.5,
+            "score": 48.5,
+            "margin": -4.6
+          },
+          "level3": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 77.5,
+            "margin": 32.7
+          },
+          "level2": {
+            "games": 10,
+            "wins": 9.0,
+            "win_rate": 0.9,
+            "score": 75.7,
+            "margin": 31
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 3.0,
+            "win_rate": 0.3,
+            "score": 47.7,
+            "margin": -6.5
+          },
+          "random": {
+            "games": 10,
+            "wins": 2.0,
+            "win_rate": 0.2,
+            "score": 51.1,
+            "margin": -12.5
+          },
+          "mixed_styles": {
+            "games": 10,
+            "wins": 5.0,
+            "win_rate": 0.5,
+            "score": 61,
+            "margin": 4
+          }
+        }
+      }
+    },
+    "robustness": {
+      "generalist_vs_L2": {
+        "pairs": 20,
+        "candidate": "L4",
+        "reference": "L2",
+        "win_credit": {
+          "delta": 0.05,
+          "ci_low": -0.17370045761428854,
+          "ci_high": 0.2737004576142885
+        },
+        "score": {
+          "delta": 0.3,
+          "ci_low": -8.640219283781873,
+          "ci_high": 9.240219283781874
+        },
+        "margin": {
+          "delta": -4.15,
+          "ci_low": -18.945130429335613,
+          "ci_high": 10.645130429335612
+        },
+        "candidate_summary": {
+          "games": 20,
+          "wins": 13.0,
+          "win_rate": 0.65,
+          "score": 75.45,
+          "margin": 18.25
+        },
+        "reference_summary": {
+          "games": 20,
+          "wins": 12.0,
+          "win_rate": 0.6,
+          "score": 75.15,
+          "margin": 22.4
+        }
+      },
+      "specialists": [
+        {
+          "pairs": 0,
+          "candidate": "L3-I",
+          "reference": "L4"
+        },
+        {
+          "pairs": 4,
+          "candidate": "L3-IR",
+          "reference": "L4",
+          "win_credit": {
+            "delta": 0.0,
+            "ci_low": -0.8001666493091715,
+            "ci_high": 0.8001666493091715
+          },
+          "score": {
+            "delta": 6.25,
+            "ci_low": -11.666855192806576,
+            "ci_high": 24.166855192806576
+          },
+          "margin": {
+            "delta": 12.75,
+            "ci_low": -17.0541937764917,
+            "ci_high": 42.5541937764917
+          },
+          "candidate_summary": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 66.75,
+            "margin": 25.5
+          },
+          "reference_summary": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 60.5,
+            "margin": 12.75
+          }
+        }
+      ],
+      "specialists_vs_L2": [
+        {
+          "pairs": 0,
+          "candidate": "L3-I",
+          "reference": "L2"
+        },
+        {
+          "pairs": 4,
+          "candidate": "L3-IR",
+          "reference": "L2",
+          "win_credit": {
+            "delta": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "score": {
+            "delta": 6,
+            "ci_low": -5.76,
+            "ci_high": 17.759999999999998
+          },
+          "margin": {
+            "delta": 8,
+            "ci_low": -7.68,
+            "ci_high": 23.68
+          },
+          "candidate_summary": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 66.75,
+            "margin": 25.5
+          },
+          "reference_summary": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 60.75,
+            "margin": 17.5
+          }
+        }
+      ],
+      "by_chart": {
+        "L3-IR": {
+          "A": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 79.5,
+            "margin": 22
+          },
+          "E": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 71.75,
+            "margin": 8.75
+          },
+          "D": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 91.25,
+            "margin": 37
+          },
+          "C": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 66.75,
+            "margin": 25.5
+          },
+          "B": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 74,
+            "margin": 27
+          }
+        },
+        "L2": {
+          "B": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 72.25,
+            "margin": 22.25
+          },
+          "A": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 79.25,
+            "margin": 21.75
+          },
+          "D": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 91.25,
+            "margin": 39.75
+          },
+          "E": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 72.25,
+            "margin": 10.75
+          },
+          "C": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 60.75,
+            "margin": 17.5
+          }
+        },
+        "L4": {
+          "B": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 61.25,
+            "margin": 9.25
+          },
+          "D": {
+            "games": 4,
+            "wins": 2.0,
+            "win_rate": 0.5,
+            "score": 80.5,
+            "margin": 8.5
+          },
+          "E": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 75.25,
+            "margin": 14.5
+          },
+          "A": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 99.75,
+            "margin": 46.25
+          },
+          "C": {
+            "games": 4,
+            "wins": 3.0,
+            "win_rate": 0.75,
+            "score": 60.5,
+            "margin": 12.75
+          }
+        }
+      },
+      "by_opponent": {
+        "L3-IR": {
+          "aggressive": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 98.4,
+            "margin": 55.9
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 2.0,
+            "win_rate": 0.2,
+            "score": 54.9,
+            "margin": -7.8
+          }
+        },
+        "L2": {
+          "aggressive": {
+            "games": 10,
+            "wins": 10.0,
+            "win_rate": 1.0,
+            "score": 98.4,
+            "margin": 55.9
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 2.0,
+            "win_rate": 0.2,
+            "score": 51.9,
+            "margin": -11.1
+          }
+        },
+        "L4": {
+          "aggressive": {
+            "games": 10,
+            "wins": 9.0,
+            "win_rate": 0.9,
+            "score": 88.9,
+            "margin": 34
+          },
+          "mixed_experts": {
+            "games": 10,
+            "wins": 4.0,
+            "win_rate": 0.4,
+            "score": 62,
+            "margin": 2.5
+          }
+        }
+      }
+    }
+  }
+}

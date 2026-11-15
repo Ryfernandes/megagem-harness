@@ -1,0 +1,11 @@
+{
+  "name": "megagem-observatory",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node web/server.mjs",
+    "test": "PYTHONPATH=src python3 -B -m unittest discover -s tests -v"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,5489 @@
+{
+  "games_per_variant": 180,
+  "start_seed": 1800,
+  "seats": 4,
+  "opponents": [
+    "ValuationBot",
+    "ValuationBot",
+    "ValuationBot"
+  ],
+  "chart": "ABCDE[seed%5]",
+  "seating": "candidate seat=(-seed)%seats",
+  "ties": "fractional win credit",
+  "formula": "p(win)*(E[value]-(1+k)*bid)",
+  "k": "scale*(base_liquidity-1)+floor*remaining_auction_horizon",
+  "fixed": [
+    "hypergeometric gem EV",
+    "mission/denial model",
+    "reserve rule",
+    "financial bidding",
+    "first-card reveal"
+  ],
+  "hand_inference": false,
+  "endgame_overrides": false,
+  "callback_errors": [],
+  "variants": {
+    "before": {
+      "flags": {
+        "inference": false,
+        "endgame": false,
+        "cash_limits": false,
+        "bid_model": false
+      },
+      "records": [
+        {
+          "seed": 1800,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 53,
+          "rival_scores": [
+            55,
+            67,
+            47
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1801,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 58,
+          "rival_scores": [
+            43,
+            51,
+            42
+          ],
+          "margin": 7,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1802,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 55,
+          "rival_scores": [
+            35,
+            25,
+            33
+          ],
+          "margin": 20,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1803,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 44,
+          "rival_scores": [
+            54,
+            71,
+            64
+          ],
+          "margin": -27,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1804,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 41,
+          "rival_scores": [
+            62,
+            57,
+            49
+          ],
+          "margin": -21,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1805,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 65,
+          "rival_scores": [
+            47,
+            52,
+            51
+          ],
+          "margin": 13,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1806,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 44,
+          "rival_scores": [
+            68,
+            48,
+            53
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1807,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 35,
+          "rival_scores": [
+            51,
+            46,
+            51
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1808,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 53,
+          "rival_scores": [
+            76,
+            56,
+            55
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1809,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 59,
+          "rival_scores": [
+            44,
+            66,
+            66
+          ],
+          "margin": -7,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1810,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 33,
+          "rival_scores": [
+            55,
+            59,
+            87
+          ],
+          "margin": -54,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1811,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 50,
+          "rival_scores": [
+            38,
+            46,
+            39
+          ],
+          "margin": 4,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1812,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 43,
+          "rival_scores": [
+            32,
+            56,
+            57
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1813,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 59,
+          "rival_scores": [
+            81,
+            48,
+            40
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1814,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 55,
+          "rival_scores": [
+            57,
+            34,
+            88
+          ],
+          "margin": -33,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1815,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 61,
+          "rival_scores": [
+            40,
+            57,
+            59
+          ],
+          "margin": 2,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1816,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 62,
+          "rival_scores": [
+            53,
+            51,
+            53
+          ],
+          "margin": 9,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1817,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 32,
+          "rival_scores": [
+            45,
+            54,
+            45
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1818,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 60,
+          "rival_scores": [
+            42,
+            53,
+            48
+          ],
+          "margin": 7,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1819,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 41,
+          "rival_scores": [
+            76,
+            50,
+            43
+          ],
+          "margin": -35,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1820,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 47,
+          "rival_scores": [
+            36,
+            59,
+            61
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1821,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 39,
+          "rival_scores": [
+            55,
+            56,
+            47
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1822,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 38,
+          "rival_scores": [
+            51,
+            56,
+            37
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1823,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 61,
+          "rival_scores": [
+            44,
+            61,
+            75
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1824,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 37,
+          "rival_scores": [
+            61,
+            76,
+            52
+          ],
+          "margin": -39,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1825,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 74,
+          "rival_scores": [
+            54,
+            52,
+            36
+          ],
+          "margin": 20,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1826,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 64,
+          "rival_scores": [
+            35,
+            53,
+            56
+          ],
+          "margin": 8,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1827,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 43,
+          "rival_scores": [
+            41,
+            37,
+            55
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1828,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 69,
+          "rival_scores": [
+            70,
+            47,
+            60
+          ],
+          "margin": -1,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1829,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 53,
+          "rival_scores": [
+            55,
+            53,
+            74
+          ],
+          "margin": -21,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1830,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 54,
+          "rival_scores": [
+            40,
+            62,
+            50
+          ],
+          "margin": -8,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1831,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 67,
+          "rival_scores": [
+            48,
+            43,
+            35
+          ],
+          "margin": 19,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1832,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 35,
+          "rival_scores": [
+            48,
+            38,
+            78
+          ],
+          "margin": -43,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1833,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 53,
+          "rival_scores": [
+            54,
+            53,
+            70
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1834,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 46,
+          "rival_scores": [
+            35,
+            34,
+            45
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1835,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 86,
+          "rival_scores": [
+            46,
+            53,
+            45
+          ],
+          "margin": 33,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1836,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 55,
+          "rival_scores": [
+            51,
+            63,
+            47
+          ],
+          "margin": -8,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1837,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 72,
+          "rival_scores": [
+            32,
+            54,
+            48
+          ],
+          "margin": 18,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1838,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 61,
+          "rival_scores": [
+            44,
+            63,
+            50
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1839,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 50,
+          "rival_scores": [
+            45,
+            50,
+            65
+          ],
+          "margin": -15,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1840,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 44,
+          "rival_scores": [
+            37,
+            66,
+            76
+          ],
+          "margin": -32,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1841,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 53,
+          "rival_scores": [
+            47,
+            51,
+            46
+          ],
+          "margin": 2,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1842,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 53,
+          "rival_scores": [
+            33,
+            54,
+            67
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1843,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 65,
+          "rival_scores": [
+            44,
+            54,
+            51
+          ],
+          "margin": 11,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1844,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 32,
+          "rival_scores": [
+            41,
+            35,
+            48
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1845,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 68,
+          "rival_scores": [
+            54,
+            33,
+            41
+          ],
+          "margin": 14,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1846,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 38,
+          "rival_scores": [
+            78,
+            67,
+            54
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1847,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 35,
+          "rival_scores": [
+            32,
+            88,
+            51
+          ],
+          "margin": -53,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1848,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 56,
+          "rival_scores": [
+            52,
+            63,
+            51
+          ],
+          "margin": -7,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1849,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 52,
+          "rival_scores": [
+            48,
+            55,
+            70
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1850,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 43,
+          "rival_scores": [
+            49,
+            75,
+            49
+          ],
+          "margin": -32,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1851,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 44,
+          "rival_scores": [
+            56,
+            68,
+            38
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1852,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 53,
+          "rival_scores": [
+            42,
+            55,
+            49
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1853,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 31,
+          "rival_scores": [
+            53,
+            67,
+            39
+          ],
+          "margin": -36,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1854,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 70,
+          "rival_scores": [
+            40,
+            68,
+            55
+          ],
+          "margin": 2,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1855,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 60,
+          "rival_scores": [
+            34,
+            74,
+            40
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1856,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 40,
+          "rival_scores": [
+            60,
+            39,
+            44
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1857,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 46,
+          "rival_scores": [
+            63,
+            32,
+            52
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1858,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 53,
+          "rival_scores": [
+            57,
+            54,
+            49
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1859,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 57,
+          "rival_scores": [
+            46,
+            42,
+            35
+          ],
+          "margin": 11,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1860,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 44,
+          "rival_scores": [
+            41,
+            53,
+            74
+          ],
+          "margin": -30,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1861,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 46,
+          "rival_scores": [
+            45,
+            38,
+            46
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1862,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 43,
+          "rival_scores": [
+            50,
+            54,
+            55
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1863,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 48,
+          "rival_scores": [
+            55,
+            35,
+            71
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1864,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 78,
+          "rival_scores": [
+            58,
+            46,
+            56
+          ],
+          "margin": 20,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1865,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 55,
+          "rival_scores": [
+            44,
+            64,
+            52
+          ],
+          "margin": -9,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1866,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 45,
+          "rival_scores": [
+            51,
+            49,
+            33
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1867,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 27,
+          "rival_scores": [
+            45,
+            60,
+            34
+          ],
+          "margin": -33,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1868,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 61,
+          "rival_scores": [
+            49,
+            67,
+            48
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1869,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 49,
+          "rival_scores": [
+            42,
+            64,
+            60
+          ],
+          "margin": -15,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1870,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 37,
+          "rival_scores": [
+            40,
+            44,
+            52
+          ],
+          "margin": -15,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1871,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 60,
+          "rival_scores": [
+            57,
+            47,
+            48
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1872,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 46,
+          "rival_scores": [
+            40,
+            56,
+            51
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1873,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 72,
+          "rival_scores": [
+            48,
+            56,
+            39
+          ],
+          "margin": 16,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1874,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 51,
+          "rival_scores": [
+            36,
+            69,
+            34
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1875,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 55,
+          "rival_scores": [
+            47,
+            67,
+            47
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1876,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 43,
+          "rival_scores": [
+            54,
+            37,
+            41
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1877,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 58,
+          "rival_scores": [
+            41,
+            51,
+            54
+          ],
+          "margin": 4,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1878,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 47,
+          "rival_scores": [
+            41,
+            45,
+            88
+          ],
+          "margin": -41,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1879,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 51,
+          "rival_scores": [
+            67,
+            52,
+            51
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1880,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 31,
+          "rival_scores": [
+            48,
+            75,
+            64
+          ],
+          "margin": -44,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1881,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 59,
+          "rival_scores": [
+            41,
+            65,
+            52
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1882,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 47,
+          "rival_scores": [
+            47,
+            48,
+            46
+          ],
+          "margin": -1,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1883,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 45,
+          "rival_scores": [
+            50,
+            57,
+            44
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1884,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 26,
+          "rival_scores": [
+            47,
+            31,
+            30
+          ],
+          "margin": -21,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1885,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 61,
+          "rival_scores": [
+            54,
+            49,
+            67
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1886,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 59,
+          "rival_scores": [
+            43,
+            41,
+            39
+          ],
+          "margin": 16,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1887,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 48,
+          "rival_scores": [
+            38,
+            54,
+            31
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1888,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 46,
+          "rival_scores": [
+            63,
+            41,
+            59
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1889,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 40,
+          "rival_scores": [
+            38,
+            62,
+            39
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1890,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 63,
+          "rival_scores": [
+            57,
+            60,
+            50
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1891,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 34,
+          "rival_scores": [
+            48,
+            50,
+            49
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1892,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 41,
+          "rival_scores": [
+            44,
+            52,
+            67
+          ],
+          "margin": -26,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1893,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 61,
+          "rival_scores": [
+            56,
+            47,
+            60
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1894,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 24,
+          "rival_scores": [
+            64,
+            47,
+            49
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1895,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 38,
+          "rival_scores": [
+            89,
+            33,
+            57
+          ],
+          "margin": -51,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1896,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 48,
+          "rival_scores": [
+            45,
+            51,
+            55
+          ],
+          "margin": -7,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1897,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 38,
+          "rival_scores": [
+            50,
+            39,
+            42
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1898,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 49,
+          "rival_scores": [
+            45,
+            89,
+            43
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1899,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 57,
+          "rival_scores": [
+            70,
+            56,
+            50
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1900,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 41,
+          "rival_scores": [
+            46,
+            62,
+            58
+          ],
+          "margin": -21,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1901,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 64,
+          "rival_scores": [
+            41,
+            44,
+            49
+          ],
+          "margin": 15,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1902,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 55,
+          "rival_scores": [
+            39,
+            61,
+            55
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1903,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 79,
+          "rival_scores": [
+            36,
+            62,
+            39
+          ],
+          "margin": 17,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1904,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 68,
+          "rival_scores": [
+            66,
+            74,
+            43
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1905,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 51,
+          "rival_scores": [
+            60,
+            56,
+            70
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1906,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 56,
+          "rival_scores": [
+            52,
+            53,
+            42
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1907,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 51,
+          "rival_scores": [
+            31,
+            31,
+            74
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1908,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 46,
+          "rival_scores": [
+            48,
+            67,
+            54
+          ],
+          "margin": -21,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1909,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 37,
+          "rival_scores": [
+            49,
+            61,
+            38
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1910,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 79,
+          "rival_scores": [
+            41,
+            39,
+            65
+          ],
+          "margin": 14,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1911,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 37,
+          "rival_scores": [
+            72,
+            42,
+            43
+          ],
+          "margin": -35,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1912,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 35,
+          "rival_scores": [
+            52,
+            64,
+            35
+          ],
+          "margin": -29,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1913,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 42,
+          "rival_scores": [
+            47,
+            56,
+            69
+          ],
+          "margin": -27,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1914,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 70,
+          "rival_scores": [
+            52,
+            73,
+            57
+          ],
+          "margin": -3,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1915,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 57,
+          "rival_scores": [
+            66,
+            52,
+            52
+          ],
+          "margin": -9,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1916,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 51,
+          "rival_scores": [
+            70,
+            48,
+            59
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1917,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 40,
+          "rival_scores": [
+            50,
+            50,
+            51
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1918,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 50,
+          "rival_scores": [
+            55,
+            64,
+            66
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1919,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 58,
+          "rival_scores": [
+            79,
+            92,
+            48
+          ],
+          "margin": -34,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1920,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 40,
+          "rival_scores": [
+            49,
+            43,
+            78
+          ],
+          "margin": -38,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1921,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 52,
+          "rival_scores": [
+            62,
+            61,
+            44
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1922,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 52,
+          "rival_scores": [
+            45,
+            51,
+            50
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1923,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 47,
+          "rival_scores": [
+            47,
+            49,
+            72
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1924,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 63,
+          "rival_scores": [
+            41,
+            92,
+            54
+          ],
+          "margin": -29,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1925,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 80,
+          "rival_scores": [
+            41,
+            42,
+            44
+          ],
+          "margin": 36,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1926,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 35,
+          "rival_scores": [
+            47,
+            30,
+            72
+          ],
+          "margin": -37,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1927,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 45,
+          "rival_scores": [
+            50,
+            47,
+            69
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1928,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 53,
+          "rival_scores": [
+            37,
+            64,
+            57
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1929,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 95,
+          "rival_scores": [
+            55,
+            52,
+            48
+          ],
+          "margin": 40,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1930,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 63,
+          "rival_scores": [
+            74,
+            72,
+            49
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1931,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 48,
+          "rival_scores": [
+            55,
+            41,
+            58
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1932,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 40,
+          "rival_scores": [
+            44,
+            48,
+            59
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1933,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 36,
+          "rival_scores": [
+            64,
+            59,
+            46
+          ],
+          "margin": -28,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1934,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 68,
+          "rival_scores": [
+            41,
+            28,
+            49
+          ],
+          "margin": 19,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1935,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 39,
+          "rival_scores": [
+            68,
+            57,
+            35
+          ],
+          "margin": -29,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1936,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 50,
+          "rival_scores": [
+            40,
+            36,
+            67
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1937,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 38,
+          "rival_scores": [
+            46,
+            52,
+            40
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1938,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 38,
+          "rival_scores": [
+            75,
+            46,
+            60
+          ],
+          "margin": -37,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1939,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 44,
+          "rival_scores": [
+            31,
+            69,
+            53
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1940,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 69,
+          "rival_scores": [
+            49,
+            51,
+            65
+          ],
+          "margin": 4,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1941,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 58,
+          "rival_scores": [
+            54,
+            56,
+            37
+          ],
+          "margin": 2,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1942,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 38,
+          "rival_scores": [
+            47,
+            52,
+            63
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1943,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 43,
+          "rival_scores": [
+            68,
+            53,
+            53
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1944,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 47,
+          "rival_scores": [
+            61,
+            32,
+            60
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1945,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 54,
+          "rival_scores": [
+            58,
+            54,
+            57
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1946,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 56,
+          "rival_scores": [
+            59,
+            46,
+            39
+          ],
+          "margin": -3,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1947,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 44,
+          "rival_scores": [
+            51,
+            29,
+            56
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1948,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 53,
+          "rival_scores": [
+            37,
+            42,
+            81
+          ],
+          "margin": -28,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1949,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 43,
+          "rival_scores": [
+            40,
+            32,
+            33
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1950,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 63,
+          "rival_scores": [
+            60,
+            50,
+            52
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1951,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 46,
+          "rival_scores": [
+            38,
+            29,
+            67
+          ],
+          "margin": -21,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1952,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 55,
+          "rival_scores": [
+            57,
+            49,
+            52
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1953,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 56,
+          "rival_scores": [
+            57,
+            53,
+            52
+          ],
+          "margin": -1,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1954,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 59,
+          "rival_scores": [
+            51,
+            51,
+            63
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1955,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 42,
+          "rival_scores": [
+            61,
+            76,
+            51
+          ],
+          "margin": -34,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1956,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 46,
+          "rival_scores": [
+            56,
+            46,
+            52
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1957,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 43,
+          "rival_scores": [
+            41,
+            72,
+            55
+          ],
+          "margin": -29,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1958,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 82,
+          "rival_scores": [
+            34,
+            50,
+            48
+          ],
+          "margin": 32,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1959,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 31,
+          "rival_scores": [
+            19,
+            27,
+            26
+          ],
+          "margin": 4,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1960,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 40,
+          "rival_scores": [
+            54,
+            48,
+            49
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1961,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 41,
+          "rival_scores": [
+            43,
+            49,
+            50
+          ],
+          "margin": -9,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1962,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 62,
+          "rival_scores": [
+            31,
+            52,
+            39
+          ],
+          "margin": 10,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1963,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 63,
+          "rival_scores": [
+            63,
+            60,
+            40
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1964,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 36,
+          "rival_scores": [
+            51,
+            36,
+            63
+          ],
+          "margin": -27,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1965,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 74,
+          "rival_scores": [
+            44,
+            52,
+            54
+          ],
+          "margin": 20,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1966,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 32,
+          "rival_scores": [
+            59,
+            47,
+            45
+          ],
+          "margin": -27,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1967,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 54,
+          "rival_scores": [
+            44,
+            53,
+            44
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1968,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 54,
+          "rival_scores": [
+            52,
+            59,
+            43
+          ],
+          "margin": -5,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1969,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 51,
+          "rival_scores": [
+            64,
+            47,
+            50
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1970,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 52,
+          "rival_scores": [
+            58,
+            47,
+            43
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1971,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 46,
+          "rival_scores": [
+            44,
+            50,
+            59
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1972,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 73,
+          "rival_scores": [
+            46,
+            50,
+            39
+          ],
+          "margin": 23,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1973,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 52,
+          "rival_scores": [
+            59,
+            60,
+            43
+          ],
+          "margin": -8,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1974,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 45,
+          "rival_scores": [
+            42,
+            63,
+            49
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1975,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 54,
+          "rival_scores": [
+            46,
+            66,
+            55
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1976,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 40,
+          "rival_scores": [
+            50,
+            48,
+            32
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1977,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 51,
+          "rival_scores": [
+            50,
+            50,
+            42
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1978,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 45,
+          "rival_scores": [
+            53,
+            44,
+            69
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1979,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 45,
+          "rival_scores": [
+            65,
+            35,
+            68
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        }
+      ],
+      "elapsed_seconds": 28.959455066000373,
+      "summary": {
+        "games": 180,
+        "wins_including_ties": 46,
+        "win_credit": 45.0,
+        "win_rate": 0.25,
+        "mean_score": 50.9,
+        "mean_margin": -11.35,
+        "paired_margin_delta": 0.0,
+        "paired_margin_ci_low": 0.0,
+        "paired_margin_ci_high": 0.0,
+        "paired_score_delta": 0.0,
+        "paired_score_ci_low": 0.0,
+        "paired_score_ci_high": 0.0
+      },
+      "settings": {
+        "k_scale": 1,
+        "k_floor": 0
+      }
+    },
+    "floor0.5": {
+      "flags": {
+        "inference": false,
+        "endgame": false,
+        "cash_limits": true,
+        "bid_model": true
+      },
+      "records": [
+        {
+          "seed": 1800,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 45,
+          "rival_scores": [
+            53,
+            74,
+            48
+          ],
+          "margin": -29,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1801,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 44,
+          "rival_scores": [
+            48,
+            48,
+            49
+          ],
+          "margin": -5,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1802,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 40,
+          "rival_scores": [
+            29,
+            25,
+            44
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1803,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 59,
+          "rival_scores": [
+            40,
+            63,
+            63
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1804,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 39,
+          "rival_scores": [
+            48,
+            39,
+            79
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1805,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 51,
+          "rival_scores": [
+            46,
+            45,
+            48
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1806,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 41,
+          "rival_scores": [
+            44,
+            66,
+            49
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1807,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 31,
+          "rival_scores": [
+            48,
+            49,
+            49
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1808,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 35,
+          "rival_scores": [
+            75,
+            64,
+            50
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1809,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 63,
+          "rival_scores": [
+            57,
+            65,
+            41
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1810,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 52,
+          "rival_scores": [
+            48,
+            44,
+            86
+          ],
+          "margin": -34,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1811,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 39,
+          "rival_scores": [
+            44,
+            38,
+            41
+          ],
+          "margin": -5,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1812,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 44,
+          "rival_scores": [
+            44,
+            37,
+            43
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1813,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 43,
+          "rival_scores": [
+            54,
+            65,
+            63
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1814,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 54,
+          "rival_scores": [
+            45,
+            50,
+            78
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1815,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 65,
+          "rival_scores": [
+            40,
+            53,
+            48
+          ],
+          "margin": 12,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1816,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 56,
+          "rival_scores": [
+            67,
+            37,
+            53
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1817,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 40,
+          "rival_scores": [
+            59,
+            37,
+            47
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1818,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 41,
+          "rival_scores": [
+            72,
+            40,
+            49
+          ],
+          "margin": -31,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1819,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 61,
+          "rival_scores": [
+            46,
+            65,
+            35
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1820,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 60,
+          "rival_scores": [
+            41,
+            48,
+            43
+          ],
+          "margin": 12,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1821,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 58,
+          "rival_scores": [
+            38,
+            47,
+            43
+          ],
+          "margin": 11,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1822,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 50,
+          "rival_scores": [
+            54,
+            39,
+            37
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1823,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 61,
+          "rival_scores": [
+            57,
+            69,
+            48
+          ],
+          "margin": -8,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1824,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 52,
+          "rival_scores": [
+            51,
+            44,
+            76
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1825,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 33,
+          "rival_scores": [
+            50,
+            68,
+            52
+          ],
+          "margin": -35,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1826,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 54,
+          "rival_scores": [
+            39,
+            50,
+            55
+          ],
+          "margin": -1,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1827,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 55,
+          "rival_scores": [
+            45,
+            40,
+            41
+          ],
+          "margin": 10,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1828,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 62,
+          "rival_scores": [
+            59,
+            53,
+            69
+          ],
+          "margin": -7,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1829,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 53,
+          "rival_scores": [
+            68,
+            58,
+            39
+          ],
+          "margin": -15,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1830,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 66,
+          "rival_scores": [
+            42,
+            52,
+            43
+          ],
+          "margin": 14,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1831,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 33,
+          "rival_scores": [
+            73,
+            42,
+            36
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1832,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 75,
+          "rival_scores": [
+            48,
+            37,
+            33
+          ],
+          "margin": 27,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1833,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 45,
+          "rival_scores": [
+            61,
+            51,
+            68
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1834,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 36,
+          "rival_scores": [
+            46,
+            31,
+            36
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1835,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 75,
+          "rival_scores": [
+            46,
+            56,
+            40
+          ],
+          "margin": 19,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1836,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 50,
+          "rival_scores": [
+            46,
+            54,
+            52
+          ],
+          "margin": -4,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1837,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 83,
+          "rival_scores": [
+            43,
+            28,
+            46
+          ],
+          "margin": 37,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1838,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 60,
+          "rival_scores": [
+            51,
+            51,
+            58
+          ],
+          "margin": 2,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1839,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 47,
+          "rival_scores": [
+            58,
+            52,
+            48
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1840,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 45,
+          "rival_scores": [
+            41,
+            51,
+            76
+          ],
+          "margin": -31,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1841,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 47,
+          "rival_scores": [
+            54,
+            49,
+            45
+          ],
+          "margin": -7,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1842,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 60,
+          "rival_scores": [
+            53,
+            49,
+            45
+          ],
+          "margin": 7,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1843,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 29,
+          "rival_scores": [
+            45,
+            48,
+            81
+          ],
+          "margin": -52,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1844,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 27,
+          "rival_scores": [
+            41,
+            35,
+            46
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1845,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 59,
+          "rival_scores": [
+            49,
+            35,
+            46
+          ],
+          "margin": 10,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1846,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 89,
+          "rival_scores": [
+            40,
+            39,
+            62
+          ],
+          "margin": 27,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1847,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 69,
+          "rival_scores": [
+            40,
+            44,
+            48
+          ],
+          "margin": 21,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1848,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 53,
+          "rival_scores": [
+            49,
+            59,
+            53
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1849,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 63,
+          "rival_scores": [
+            50,
+            60,
+            44
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1850,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 84,
+          "rival_scores": [
+            36,
+            42,
+            50
+          ],
+          "margin": 34,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1851,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 42,
+          "rival_scores": [
+            43,
+            54,
+            62
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1852,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 54,
+          "rival_scores": [
+            39,
+            47,
+            49
+          ],
+          "margin": 5,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1853,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 38,
+          "rival_scores": [
+            52,
+            57,
+            44
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1854,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 57,
+          "rival_scores": [
+            46,
+            52,
+            67
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1855,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 55,
+          "rival_scores": [
+            52,
+            51,
+            44
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1856,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 52,
+          "rival_scores": [
+            38,
+            31,
+            38
+          ],
+          "margin": 14,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1857,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 54,
+          "rival_scores": [
+            43,
+            46,
+            42
+          ],
+          "margin": 8,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1858,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 50,
+          "rival_scores": [
+            62,
+            48,
+            42
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1859,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 44,
+          "rival_scores": [
+            50,
+            38,
+            46
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1860,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 61,
+          "rival_scores": [
+            60,
+            39,
+            48
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1861,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 26,
+          "rival_scores": [
+            39,
+            56,
+            30
+          ],
+          "margin": -30,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1862,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 68,
+          "rival_scores": [
+            39,
+            46,
+            43
+          ],
+          "margin": 22,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1863,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 49,
+          "rival_scores": [
+            36,
+            66,
+            45
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1864,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 51,
+          "rival_scores": [
+            49,
+            63,
+            76
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1865,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 40,
+          "rival_scores": [
+            51,
+            56,
+            80
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1866,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 35,
+          "rival_scores": [
+            50,
+            40,
+            55
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1867,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 23,
+          "rival_scores": [
+            25,
+            57,
+            57
+          ],
+          "margin": -34,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1868,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 84,
+          "rival_scores": [
+            49,
+            43,
+            41
+          ],
+          "margin": 35,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1869,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 44,
+          "rival_scores": [
+            89,
+            44,
+            38
+          ],
+          "margin": -45,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1870,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 35,
+          "rival_scores": [
+            39,
+            35,
+            55
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1871,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 75,
+          "rival_scores": [
+            36,
+            55,
+            38
+          ],
+          "margin": 20,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1872,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 42,
+          "rival_scores": [
+            58,
+            48,
+            40
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1873,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 37,
+          "rival_scores": [
+            82,
+            56,
+            49
+          ],
+          "margin": -45,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1874,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 48,
+          "rival_scores": [
+            41,
+            37,
+            54
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1875,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 82,
+          "rival_scores": [
+            38,
+            50,
+            39
+          ],
+          "margin": 32,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1876,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 25,
+          "rival_scores": [
+            47,
+            48,
+            45
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1877,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 62,
+          "rival_scores": [
+            65,
+            30,
+            42
+          ],
+          "margin": -3,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1878,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 43,
+          "rival_scores": [
+            72,
+            30,
+            50
+          ],
+          "margin": -29,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1879,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 49,
+          "rival_scores": [
+            62,
+            53,
+            52
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1880,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 50,
+          "rival_scores": [
+            85,
+            36,
+            42
+          ],
+          "margin": -35,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1881,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 38,
+          "rival_scores": [
+            58,
+            55,
+            56
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1882,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 48,
+          "rival_scores": [
+            35,
+            48,
+            59
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1883,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 50,
+          "rival_scores": [
+            60,
+            45,
+            34
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1884,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 18,
+          "rival_scores": [
+            42,
+            25,
+            30
+          ],
+          "margin": -24,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1885,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 57,
+          "rival_scores": [
+            56,
+            47,
+            68
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1886,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 46,
+          "rival_scores": [
+            38,
+            46,
+            37
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1887,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 31,
+          "rival_scores": [
+            41,
+            42,
+            51
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1888,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 37,
+          "rival_scores": [
+            81,
+            45,
+            41
+          ],
+          "margin": -44,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1889,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 30,
+          "rival_scores": [
+            69,
+            40,
+            40
+          ],
+          "margin": -39,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1890,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 54,
+          "rival_scores": [
+            60,
+            52,
+            50
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1891,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 47,
+          "rival_scores": [
+            32,
+            66,
+            49
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1892,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 37,
+          "rival_scores": [
+            52,
+            76,
+            42
+          ],
+          "margin": -39,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1893,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 66,
+          "rival_scores": [
+            48,
+            41,
+            46
+          ],
+          "margin": 18,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1894,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 93,
+          "rival_scores": [
+            23,
+            40,
+            38
+          ],
+          "margin": 53,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1895,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 60,
+          "rival_scores": [
+            36,
+            43,
+            47
+          ],
+          "margin": 13,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1896,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 49,
+          "rival_scores": [
+            39,
+            38,
+            58
+          ],
+          "margin": -9,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1897,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 38,
+          "rival_scores": [
+            42,
+            48,
+            43
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1898,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 62,
+          "rival_scores": [
+            46,
+            49,
+            37
+          ],
+          "margin": 13,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1899,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 51,
+          "rival_scores": [
+            73,
+            48,
+            60
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1900,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 48,
+          "rival_scores": [
+            88,
+            41,
+            32
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1901,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 57,
+          "rival_scores": [
+            43,
+            44,
+            49
+          ],
+          "margin": 8,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1902,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 71,
+          "rival_scores": [
+            28,
+            48,
+            58
+          ],
+          "margin": 13,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1903,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 78,
+          "rival_scores": [
+            43,
+            51,
+            39
+          ],
+          "margin": 27,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1904,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 68,
+          "rival_scores": [
+            58,
+            79,
+            56
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1905,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 61,
+          "rival_scores": [
+            50,
+            50,
+            63
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1906,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 52,
+          "rival_scores": [
+            33,
+            49,
+            58
+          ],
+          "margin": -6,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1907,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 37,
+          "rival_scores": [
+            47,
+            45,
+            47
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1908,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 42,
+          "rival_scores": [
+            55,
+            43,
+            64
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1909,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 59,
+          "rival_scores": [
+            45,
+            38,
+            31
+          ],
+          "margin": 14,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1910,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 44,
+          "rival_scores": [
+            56,
+            40,
+            64
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1911,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 58,
+          "rival_scores": [
+            49,
+            51,
+            35
+          ],
+          "margin": 7,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1912,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 41,
+          "rival_scores": [
+            42,
+            36,
+            61
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1913,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 42,
+          "rival_scores": [
+            43,
+            45,
+            78
+          ],
+          "margin": -36,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1914,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 38,
+          "rival_scores": [
+            73,
+            82,
+            54
+          ],
+          "margin": -44,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1915,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 65,
+          "rival_scores": [
+            51,
+            42,
+            52
+          ],
+          "margin": 13,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1916,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 52,
+          "rival_scores": [
+            70,
+            45,
+            61
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1917,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 43,
+          "rival_scores": [
+            57,
+            51,
+            33
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1918,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 37,
+          "rival_scores": [
+            79,
+            47,
+            55
+          ],
+          "margin": -42,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1919,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 67,
+          "rival_scores": [
+            45,
+            113,
+            50
+          ],
+          "margin": -46,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1920,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 32,
+          "rival_scores": [
+            59,
+            49,
+            47
+          ],
+          "margin": -27,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1921,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 46,
+          "rival_scores": [
+            52,
+            56,
+            56
+          ],
+          "margin": -10,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1922,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 42,
+          "rival_scores": [
+            37,
+            44,
+            80
+          ],
+          "margin": -38,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1923,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 47,
+          "rival_scores": [
+            56,
+            42,
+            65
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1924,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 87,
+          "rival_scores": [
+            41,
+            52,
+            57
+          ],
+          "margin": 30,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1925,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 68,
+          "rival_scores": [
+            37,
+            53,
+            51
+          ],
+          "margin": 15,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1926,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 44,
+          "rival_scores": [
+            45,
+            25,
+            63
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1927,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 52,
+          "rival_scores": [
+            65,
+            48,
+            32
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1928,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 44,
+          "rival_scores": [
+            45,
+            66,
+            51
+          ],
+          "margin": -22,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1929,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 44,
+          "rival_scores": [
+            52,
+            70,
+            44
+          ],
+          "margin": -26,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1930,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 80,
+          "rival_scores": [
+            56,
+            48,
+            64
+          ],
+          "margin": 16,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1931,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 38,
+          "rival_scores": [
+            53,
+            56,
+            45
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1932,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 33,
+          "rival_scores": [
+            44,
+            45,
+            51
+          ],
+          "margin": -18,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1933,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 71,
+          "rival_scores": [
+            37,
+            56,
+            39
+          ],
+          "margin": 15,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1934,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 36,
+          "rival_scores": [
+            51,
+            40,
+            69
+          ],
+          "margin": -33,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1935,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 47,
+          "rival_scores": [
+            36,
+            55,
+            45
+          ],
+          "margin": -8,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1936,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 38,
+          "rival_scores": [
+            49,
+            49,
+            48
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 2
+        },
+        {
+          "seed": 1937,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 58,
+          "rival_scores": [
+            39,
+            41,
+            33
+          ],
+          "margin": 17,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1938,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 52,
+          "rival_scores": [
+            49,
+            54,
+            45
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1939,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 35,
+          "rival_scores": [
+            49,
+            52,
+            45
+          ],
+          "margin": -17,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1940,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 66,
+          "rival_scores": [
+            68,
+            56,
+            40
+          ],
+          "margin": -2,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1941,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 58,
+          "rival_scores": [
+            50,
+            35,
+            55
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1942,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 45,
+          "rival_scores": [
+            72,
+            46,
+            43
+          ],
+          "margin": -27,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1943,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 58,
+          "rival_scores": [
+            52,
+            52,
+            58
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1944,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 45,
+          "rival_scores": [
+            64,
+            44,
+            42
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1945,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 37,
+          "rival_scores": [
+            44,
+            71,
+            59
+          ],
+          "margin": -34,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1946,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 36,
+          "rival_scores": [
+            55,
+            47,
+            54
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1947,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 48,
+          "rival_scores": [
+            59,
+            46,
+            44
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1948,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 32,
+          "rival_scores": [
+            51,
+            64,
+            44
+          ],
+          "margin": -32,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1949,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 29,
+          "rival_scores": [
+            35,
+            35,
+            41
+          ],
+          "margin": -12,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1950,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 54,
+          "rival_scores": [
+            54,
+            47,
+            65
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1951,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 42,
+          "rival_scores": [
+            30,
+            42,
+            70
+          ],
+          "margin": -28,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1952,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 59,
+          "rival_scores": [
+            48,
+            43,
+            47
+          ],
+          "margin": 11,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1953,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 52,
+          "rival_scores": [
+            65,
+            44,
+            55
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1954,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 80,
+          "rival_scores": [
+            48,
+            47,
+            45
+          ],
+          "margin": 32,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1955,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 44,
+          "rival_scores": [
+            57,
+            40,
+            56
+          ],
+          "margin": -13,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1956,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 37,
+          "rival_scores": [
+            57,
+            44,
+            56
+          ],
+          "margin": -20,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1957,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 95,
+          "rival_scores": [
+            44,
+            35,
+            38
+          ],
+          "margin": 51,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1958,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 51,
+          "rival_scores": [
+            32,
+            55,
+            67
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1959,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 14,
+          "rival_scores": [
+            27,
+            29,
+            30
+          ],
+          "margin": -16,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1960,
+          "chart": "A",
+          "seat": 0,
+          "candidate_score": 51,
+          "rival_scores": [
+            54,
+            40,
+            42
+          ],
+          "margin": -3,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1961,
+          "chart": "B",
+          "seat": 3,
+          "candidate_score": 56,
+          "rival_scores": [
+            43,
+            41,
+            36
+          ],
+          "margin": 13,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1962,
+          "chart": "C",
+          "seat": 2,
+          "candidate_score": 49,
+          "rival_scores": [
+            49,
+            33,
+            35
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1963,
+          "chart": "D",
+          "seat": 1,
+          "candidate_score": 45,
+          "rival_scores": [
+            70,
+            51,
+            63
+          ],
+          "margin": -25,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1964,
+          "chart": "E",
+          "seat": 0,
+          "candidate_score": 59,
+          "rival_scores": [
+            39,
+            39,
+            37
+          ],
+          "margin": 20,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1965,
+          "chart": "A",
+          "seat": 3,
+          "candidate_score": 62,
+          "rival_scores": [
+            53,
+            38,
+            53
+          ],
+          "margin": 9,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1966,
+          "chart": "B",
+          "seat": 2,
+          "candidate_score": 37,
+          "rival_scores": [
+            47,
+            32,
+            63
+          ],
+          "margin": -26,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1967,
+          "chart": "C",
+          "seat": 1,
+          "candidate_score": 51,
+          "rival_scores": [
+            35,
+            58,
+            47
+          ],
+          "margin": -7,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1968,
+          "chart": "D",
+          "seat": 0,
+          "candidate_score": 41,
+          "rival_scores": [
+            52,
+            60,
+            49
+          ],
+          "margin": -19,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1969,
+          "chart": "E",
+          "seat": 3,
+          "candidate_score": 51,
+          "rival_scores": [
+            51,
+            59,
+            48
+          ],
+          "margin": -8,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1970,
+          "chart": "A",
+          "seat": 2,
+          "candidate_score": 49,
+          "rival_scores": [
+            37,
+            47,
+            60
+          ],
+          "margin": -11,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1971,
+          "chart": "B",
+          "seat": 1,
+          "candidate_score": 54,
+          "rival_scores": [
+            44,
+            34,
+            51
+          ],
+          "margin": 3,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1972,
+          "chart": "C",
+          "seat": 0,
+          "candidate_score": 40,
+          "rival_scores": [
+            57,
+            63,
+            41
+          ],
+          "margin": -23,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1973,
+          "chart": "D",
+          "seat": 3,
+          "candidate_score": 48,
+          "rival_scores": [
+            69,
+            74,
+            45
+          ],
+          "margin": -26,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1974,
+          "chart": "E",
+          "seat": 2,
+          "candidate_score": 55,
+          "rival_scores": [
+            44,
+            53,
+            54
+          ],
+          "margin": 1,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1975,
+          "chart": "A",
+          "seat": 1,
+          "candidate_score": 56,
+          "rival_scores": [
+            50,
+            56,
+            48
+          ],
+          "margin": 0,
+          "win": true,
+          "win_credit": 0.5,
+          "winner_count": 2
+        },
+        {
+          "seed": 1976,
+          "chart": "B",
+          "seat": 0,
+          "candidate_score": 26,
+          "rival_scores": [
+            54,
+            56,
+            31
+          ],
+          "margin": -30,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1977,
+          "chart": "C",
+          "seat": 3,
+          "candidate_score": 46,
+          "rival_scores": [
+            60,
+            46,
+            46
+          ],
+          "margin": -14,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1978,
+          "chart": "D",
+          "seat": 2,
+          "candidate_score": 83,
+          "rival_scores": [
+            33,
+            46,
+            55
+          ],
+          "margin": 28,
+          "win": true,
+          "win_credit": 1.0,
+          "winner_count": 1
+        },
+        {
+          "seed": 1979,
+          "chart": "E",
+          "seat": 1,
+          "candidate_score": 37,
+          "rival_scores": [
+            56,
+            33,
+            77
+          ],
+          "margin": -40,
+          "win": false,
+          "win_credit": 0.0,
+          "winner_count": 1
+        }
+      ],
+      "elapsed_seconds": 30.750277096998616,
+      "summary": {
+        "games": 180,
+        "wins_including_ties": 55,
+        "win_credit": 52.5,
+        "win_rate": 0.2916666666666667,
+        "mean_score": 50.52777777777778,
+        "mean_margin": -9.166666666666666,
+        "paired_margin_delta": 2.183333333333333,
+        "paired_margin_ci_low": -1.7203442143167424,
+        "paired_margin_ci_high": 6.087010880983408,
+        "paired_score_delta": -0.37222222222222223,
+        "paired_score_ci_low": -2.8634432947422295,
+        "paired_score_ci_high": 2.118998850297785
+      },
+      "settings": {
+        "k_scale": 1.0,
+        "k_floor": 0.5
+      }
+    }
+  },
+  "validation": {
+    "preselected_variant": "floor0.5",
+    "confirmed": false
+  }
+}
