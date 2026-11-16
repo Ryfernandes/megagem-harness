@@ -1,0 +1,45 @@
+"""Compare one seating of analytic bots on paired seeds.
+
+Run from the repository root:
+
+    PYTHONPATH=src python3 experiments/compare.py
+
+Edit TABLE and GAMES_PER_SEATING below. Each distinct permutation of TABLE is
+played. Runners are reused across seeds, so a bot that keeps memory will.
+Chart A is the harness default. A win is any share of the high score.
+"""
+
+from random import Random
+from itertools import permutations
+from bot_runner import BotRunner
+from harness import play_game
+from bot_definitions.value_liquidity_bot import ValueLiquidityBot
+from bot_definitions.adaptive_bot import AdaptiveBot
+from bot_definitions.aggressive_bot import AggressiveBot
+from bot_definitions.baselines import MyopicEvBot, FractionValueBot
+
+GAMES_PER_SEATING = 20           # raise for tighter results
+TABLE = [AdaptiveBot, MyopicEvBot, MyopicEvBot]
+
+def main():
+    totals = {}
+    for seating in set(permutations(range(len(TABLE)))):
+        classes = [TABLE[i] for i in seating]
+        labels = [f"{TABLE[i].__name__}#{i}" for i in seating]
+        runners = [BotRunner(c) for c in classes]
+        try:
+            for seed in range(GAMES_PER_SEATING):
+                res = play_game(len(classes), bots=runners, rng=Random(seed))
+                for p, label in enumerate(labels):
+                    t = totals.setdefault(label, [0, 0, 0])
+                    t[0] += res.scores[p]
+                    t[1] += p in res.winner_ids
+                    t[2] += 1
+        finally:
+            for r in runners:
+                r.close()
+    for label, (s, w, n) in sorted(totals.items()):
+        print(f"{label:28s} mean score {s/n:6.1f}   win rate {w/n:5.1%}   ({n} games)")
+
+if __name__ == "__main__":
+    main()
