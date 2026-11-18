@@ -319,7 +319,44 @@ def probability_we_win(
     previous_winner_id: int | None,
     num_players: int,
 ) -> float:
-    """Return the product, over opponents, of P(our bid beats that opponent)."""
+    """Return P(our bid wins the auction) given independent opponent distributions.
+
+    When ``previous_winner_id`` is not None, tie priority is a total order so
+    winning equals beating every opponent independently. In Round 1
+    (``previous_winner_id`` is None), ties split uniformly across all tied
+    bidders (``1 / (k + 1)`` when ``k`` opponents tie at ``our_bid``), computed
+    exactly via a tiny DP over opponents.
+    """
+    if previous_winner_id is None:
+        opps = [
+            dist for opp_id, dist in opponent_distributions.items() if opp_id != our_id
+        ]
+        m = len(opps)
+        if m == 0:
+            return 1.0
+        dp = [0.0] * (m + 1)
+        dp[0] = 1.0
+        cur_max = 0
+        for dist in opps:
+            p_lt = 0.0
+            p_eq = 0.0
+            if not dist:
+                if our_bid > 0:
+                    p_lt = 1.0
+                elif our_bid == 0:
+                    p_eq = 1.0
+            else:
+                for their_bid, mass in dist:
+                    if their_bid < our_bid:
+                        p_lt += mass
+                    elif their_bid == our_bid:
+                        p_eq += mass
+            cur_max += 1
+            for k in range(cur_max, 0, -1):
+                dp[k] = dp[k] * p_lt + dp[k - 1] * p_eq
+            dp[0] *= p_lt
+        return sum(dp[k] / float(k + 1) for k in range(m + 1))
+
     chance = 1.0
     for opp_id, dist in opponent_distributions.items():
         if opp_id == our_id:
@@ -329,11 +366,8 @@ def probability_we_win(
         for their_bid, mass in dist:
             if our_bid > their_bid:
                 beat += mass
-            elif our_bid == their_bid:
-                if tie_result is True:
-                    beat += mass
-                elif tie_result is None:
-                    beat += 0.5 * mass
+            elif our_bid == their_bid and tie_result is True:
+                beat += mass
         chance *= beat
     return chance
 

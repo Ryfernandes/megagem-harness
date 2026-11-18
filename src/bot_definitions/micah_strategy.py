@@ -443,6 +443,51 @@ def _mission_progress_and_missing(
     return frac, missing_total, missing_fixed
 
 
+def _mission_is_feasible(
+    mission: MissionCard,
+    after: Mapping[GemType, int],
+    missing_fixed: Mapping[GemType, int],
+    future_supplies: Mapping[GemType, float],
+) -> bool:
+    """Return True if remaining supplies still allow completing ``mission``."""
+    for gem, need in missing_fixed.items():
+        if need > 0 and future_supplies.get(gem, 0.0) <= 1e-9:
+            return False
+
+    wc_req = mission.gem_requirements.get(GemType.WILD_CARD, 0)
+    if wc_req <= 0:
+        return True
+
+    rem = {
+        gem: max(0, after.get(gem, 0) - mission.gem_requirements.get(gem, 0))
+        for gem in STANDARD_GEMS
+    }
+    sup = {
+        gem: max(0.0, future_supplies.get(gem, 0.0) - float(missing_fixed.get(gem, 0)))
+        for gem in STANDARD_GEMS
+    }
+    match mission.wild_card_requirement:
+        case None:
+            return sum(rem.values()) + sum(sup.values()) + 1e-9 >= float(wc_req)
+        case WildCardRequirement.SAME:
+            return max(
+                (rem[g] + sup[g] for g in STANDARD_GEMS), default=0.0
+            ) + 1e-9 >= float(wc_req)
+        case WildCardRequirement.DIFFERENT:
+            avail_colors = sum(1 for g in STANDARD_GEMS if rem[g] > 0 or sup[g] > 1e-9)
+            return avail_colors >= wc_req
+        case WildCardRequirement.PAIRS:
+            target_pairs = wc_req // 2
+            have_pairs = sum(v // 2 for v in rem.values())
+            rem_pairs_needed = max(0, target_pairs - have_pairs)
+            poss_pairs = sum(
+                int(math.floor((rem[g] % 2) + sup[g] + 1e-9)) // 2
+                for g in STANDARD_GEMS
+            )
+            return poss_pairs >= rem_pairs_needed
+    return True
+
+
 def mission_progress_value(
     won_gems: Mapping[GemType, int],
     added_gems: Sequence[GemType],
@@ -476,14 +521,10 @@ def mission_progress_value(
         if delta <= 0.0:
             continue
 
-        # A mission requiring more copies of a sold-out gem is dead.
-        if future_supplies_after is not None:
-            dead = any(
-                future_supplies_after.get(gem, 0.0) + 1e-9 < float(need)
-                for gem, need in missing_fixed.items()
-            )
-            if dead:
-                continue
+        if future_supplies_after is not None and not _mission_is_feasible(
+            mission, after, missing_fixed, future_supplies_after
+        ):
+            continue
 
         horizon_feasibility = min(
             1.0, (rounds_left_after * 1.25) / float(max(1, missing_after))
@@ -610,6 +651,34 @@ def estimate_win_probability(
     prev_winner = info.previous_winner_id
     self_id = info.self_player.id
 
+    if prev_winner is None:
+        m = len(info.other_players)
+        dp = [0.0] * (m + 1)
+        dp[0] = 1.0
+        cur_max = 0
+        for opp in info.other_players:
+            opp_cap = opp.coins + (card.value if card.type is AuctionType.LOAN else 0)
+            if bid > opp_cap:
+                p_lt, p_eq = 1.0, 0.0
+            elif opp_cap <= 0:
+                p_lt = 1.0 if bid > 0 else 0.0
+                p_eq = 1.0 if bid == 0 else 0.0
+            else:
+                opp_target, ref_scale = _opponent_reference_bid(
+                    info, opp, card, public_evs, config
+                )
+                spread = max(1.25, config.win_prob_spread_ratio * ref_scale)
+                z_lo = max(-30.0, min(30.0, (float(bid) - 0.5 - opp_target) / spread))
+                z_hi = max(-30.0, min(30.0, (float(bid) + 0.5 - opp_target) / spread))
+                p_lt = 1.0 / (1.0 + math.exp(-z_lo))
+                p_hi = 1.0 if bid >= opp_cap else 1.0 / (1.0 + math.exp(-z_hi))
+                p_eq = max(0.0, p_hi - p_lt)
+            cur_max += 1
+            for k in range(cur_max, 0, -1):
+                dp[k] = dp[k] * p_lt + dp[k - 1] * p_eq
+            dp[0] *= p_lt
+        return sum(dp[k] / float(k + 1) for k in range(m + 1))
+
     prob = 1.0
     for opp in info.other_players:
         opp_cap = opp.coins + (card.value if card.type is AuctionType.LOAN else 0)
@@ -701,9 +770,8 @@ def _color_mission_interest(
         frac_before, _, _ = _mission_progress_and_missing(mission, player.won_gems)
         frac_after, _, missing_fixed = _mission_progress_and_missing(mission, after)
         delta = max(0.0, frac_after - frac_before)
-        if delta > 0.0 and all(
-            future_supplies.get(gem, 0.0) + 1e-9 >= float(need)
-            for gem, need in missing_fixed.items()
+        if delta > 0.0 and _mission_is_feasible(
+            mission, after, missing_fixed, future_supplies
         ):
             interest += 0.35 * (float(mission.value) / 10.0) * delta
     return interest

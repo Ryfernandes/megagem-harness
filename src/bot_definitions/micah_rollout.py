@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import time
 from collections import deque
 from collections.abc import Mapping, Sequence
@@ -393,6 +394,40 @@ def _sim_immediate_mission_bonus(
     return total
 
 
+def _sim_mission_is_feasible(
+    mission: _CompiledMission,
+    after: Sequence[int],
+    missing_fixed: Sequence[int],
+    future_supplies: Sequence[float],
+) -> bool:
+    for gi in range(5):
+        if missing_fixed[gi] > 0 and future_supplies[gi] <= 1e-9:
+            return False
+
+    wc_req = mission.wc_req
+    if wc_req <= 0:
+        return True
+
+    rem = [max(0, after[gi] - mission.req[gi]) for gi in range(5)]
+    sup = [max(0.0, future_supplies[gi] - float(missing_fixed[gi])) for gi in range(5)]
+    wt = mission.wc_type
+    if wt is None:
+        return sum(rem) + sum(sup) + 1e-9 >= float(wc_req)
+    if wt is WildCardRequirement.SAME:
+        return max((rem[gi] + sup[gi] for gi in range(5)), default=0.0) + 1e-9 >= float(
+            wc_req
+        )
+    if wt is WildCardRequirement.DIFFERENT:
+        return sum(1 for gi in range(5) if rem[gi] > 0 or sup[gi] > 1e-9) >= wc_req
+    target_pairs = wc_req // 2
+    have_pairs = sum(v // 2 for v in rem)
+    rem_pairs_needed = max(0, target_pairs - have_pairs)
+    poss_pairs = sum(
+        int(math.floor((rem[gi] % 2) + sup[gi] + 1e-9)) // 2 for gi in range(5)
+    )
+    return poss_pairs >= rem_pairs_needed
+
+
 def _sim_mission_values(
     won: Sequence[int],
     lot: Sequence[int],
@@ -424,9 +459,8 @@ def _sim_mission_values(
         delta = frac_after - frac_before
         if delta <= 0.0:
             continue
-        if any(
-            future_supplies_after[gi] + 1e-9 < float(missing_fixed[gi])
-            for gi in range(5)
+        if not _sim_mission_is_feasible(
+            mission, after, missing_fixed, future_supplies_after
         ):
             continue
         feasibility = min(
@@ -542,8 +576,8 @@ def _sim_color_mission_interest(
         frac_before, _, _ = _mission_progress_missing(mission, won)
         frac_after, _, missing_fixed = _mission_progress_missing(mission, after)
         delta = frac_after - frac_before
-        if delta > 0.0 and all(
-            supplies[idx] + 1e-9 >= float(missing_fixed[idx]) for idx in range(5)
+        if delta > 0.0 and _sim_mission_is_feasible(
+            mission, after, missing_fixed, supplies
         ):
             interest += 0.35 * (float(mission.value) / 10.0) * delta
     return interest
@@ -561,6 +595,7 @@ def _pop_reveal_gem(
     self_hidden_counts: list[int],
     missions: Sequence[_CompiledMission],
     chart_values: tuple[int, ...],
+    config: StrategyConfig = DEFAULT_STRATEGY_CONFIG,
 ) -> int | None:
     hidden = winner.hidden_gems
     if not hidden:
@@ -617,9 +652,13 @@ def _pop_reveal_gem(
                     )
                     imm = 1.25 if gi == next_gi else 1.0
                     directional = (
-                        (opp_int - self_int) * shift * min(1.5, sup / 1.5) * imm
+                        config.reveal_directional_weight
+                        * (opp_int - self_int)
+                        * shift
+                        * min(1.5, sup / 1.5)
+                        * imm
                     )
-                    cached[gi] = directional - 0.25 * sup
+                    cached[gi] = directional - config.reveal_leak_penalty * sup
             if cached[gi] > best_score + 1e-12:
                 best_score = cached[gi]
                 best_pos = pos
@@ -890,6 +929,7 @@ def _simulate_candidate_on_world(
             self_hidden_counts,
             available_missions,
             chart_values,
+            config,
         )
 
         while len(auction_gems) < GEMS_ON_AUCTION and gem_deck:
