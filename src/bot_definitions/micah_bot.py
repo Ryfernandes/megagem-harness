@@ -1,40 +1,41 @@
-"""MicahBot: analytic-core MegaGem tournament bot.
+"""MicahBot: price every gem exactly, then bid only when the points are worth it.
 
-Strategy overview:
-    1. Exact gem valuation: computes each gem color's exact terminal display
-       distribution via hypergeometric sampling (combining revealed gems,
-       this bot's private hidden hand, and unknown gems across the draw pile
-       and opponents' hands) and maps counts through the active ValueChart
-       (A-E).
-    2. Concave liquidity & multi-round horizon: estimates remaining auction
-       rounds from remaining gems and undrawn auction cards, and values cash
-       with a diminishing-returns curve so early scarce coins carry a higher
-       option value while final-round cash reduces to face value.
-    3. Auction-specific utility:
-       - Treasure: expected gem value + immediate multi-mission completions +
-         feasibility-discounted mission progress - liquidity-adjusted cost -
-         tie-priority penalty.
-       - Investment: bonus minus lost liquidity and tie-priority penalty
-         (accounting for bid return at scoring).
-       - Loan: concave liquidity value of (L - bid) minus principal-repayment
-         cost bid and tie-priority penalty, never bidding >= L without denial.
-    4. Bid selection & reveals: scores every legal integer bid against a
-       tie-order-aware win-probability estimate (hard-capped at opponents'
-       legal coin limits). Reveals hidden gems with zero/minimal future supply
-       first, and otherwise uses chart-aware public_value_shift to depress
-       prices of colors MicahBot wants and inflate prices rivals contest.
-    5. Opponent bid modeling & endgame (Milestone 3): tracks each opponent's
-       bid-to-public-value ratio per game with censoring awareness for cash-
-       capped all-ins and cash-poor passes, adds scaled late blocking against
-       contenders, and evaluates terminal-round bids by first-place probability.
-    6. Opponent hand inference (Milestone 4): maintains weak Bayesian beliefs
-       over each opponent's hidden-hand color counts using chart-aware bid
-       likelihoods (explaining away mission-driven bids) and reveal choices,
-       feeding those beliefs into gem valuation and endgame sampling.
-    7. Bounded lookahead (Milestone 5): for close or high-impact decisions
-       (late treasure, loans, mission races, near-tied bids), evaluates top
-       candidates on Common-Random-Numbers rollout worlds using the remaining
-       decks and opponent models, strictly bounded by ``timeout_seconds``.
+Strategy:
+    1. Gem values. Each color's final chart value is an exact average over
+       the gems still hidden. The average uses the value display, this bot's
+       own hidden hand, and the public unknown pool (opponents' hands and
+       the draw pile counted together). It works for charts A through E.
+       Hidden deck order and other players' hidden gems are never read.
+    2. Coin price. Remaining auctions are estimated from the gems and auction
+       cards left. Early coins are worth more than 1 point, with diminishing
+       returns. At the end a coin is worth its face value.
+    3. What a win is worth.
+       - Treasure: gem value, plus missions finished now, plus discounted
+         progress on missions that are still possible, minus the coin cost,
+         minus a penalty for winning the tie-break and bidding last next time.
+       - Investment: the bonus, minus the cost of locking the coins up. The
+         bid itself comes back at scoring.
+       - Loan: the extra value of holding the borrowed coins, minus the bid.
+         The bot does not bid the whole loan unless blocking a rival pays for it.
+    4. Choosing a bid and a reveal. Every legal integer bid is scored by the
+       chance of winning times the points gained. That chance uses the tie
+       order and never assumes an opponent can bid more coins than they have.
+       The reveal prefers a color that will not be sold again. Otherwise it
+       reveals a gem that makes colors this bot still wants look cheaper, and
+       colors rivals want look more expensive.
+    5. Opponent bids and the endgame. Each opponent's bid-to-value ratio is
+       learned during the game. An all-in that hit their coin cap, and a zero
+       from a broke player, are not treated as their real strategy. Late in
+       the game the bot will spend extra to block a contender, and the last
+       bids are scored by the chance of finishing in first place.
+    6. Hidden hands. A weak probability is kept for each opponent's color
+       counts. It is updated from their bids and from gems they reveal, and
+       mission-driven bids are not treated as pure color preference. Those
+       beliefs feed the gem values and the endgame.
+    7. Short lookahead. On close or expensive decisions (late treasure, loans,
+       mission races, near-tied bids) the top bids are tried on a few possible
+       futures. The same random worlds are used for every candidate. The
+       search stops inside ``timeout_seconds``.
 
 Contributors:
     Micah
