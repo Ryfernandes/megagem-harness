@@ -2,4 +2,15 @@
 
 from bot_definitions.small_bid_bot import SmallBidBot
 
-__all__ = ["SmallBidBot"]
+from bot_definitions.adaptive_finance_bots import (
+    ConservativeAdaptiveBot,
+    FinanceAwareAdaptiveBot,
+    LoanAwareAdaptiveBot,
+)
+
+__all__ = [
+    "SmallBidBot",
+    "ConservativeAdaptiveBot",
+    "LoanAwareAdaptiveBot",
+    "FinanceAwareAdaptiveBot",
+]
