@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections import Counter
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
@@ -25,6 +26,50 @@ class PricingConfig:
 
 
 DEFAULT_PRICING = PricingConfig()
+
+
+def _env_float(name: str, default: float) -> float:
+    """Read a float setting, or keep the default when the variable is unset."""
+    raw = os.environ.get(name)
+    if raw is None or raw.strip() == "":
+        return default
+    return float(raw)
+
+
+def _env_int(name: str, default: int) -> int:
+    """Read an integer setting, or keep the default when the variable is unset."""
+    raw = os.environ.get(name)
+    if raw is None or raw.strip() == "":
+        return default
+    return int(raw)
+
+
+def pricing_from_env() -> PricingConfig:
+    """Build pricing settings from GL_CFG_* variables.
+
+    The harness calls GemLedgerBot() with no arguments, so a search script
+    passes candidate numbers through the environment. Unset variables keep
+    today's defaults.
+    """
+    defaults = DEFAULT_PRICING
+    return PricingConfig(
+        coin_scarcity_gain=_env_float(
+            "GL_CFG_COIN_SCARCITY", defaults.coin_scarcity_gain
+        ),
+        endgame_gem_threshold=_env_int(
+            "GL_CFG_ENDGAME_GEMS", defaults.endgame_gem_threshold
+        ),
+        endgame_premium_floor=_env_float(
+            "GL_CFG_ENDGAME_FLOOR", defaults.endgame_premium_floor
+        ),
+        max_coin_value=_env_float("GL_CFG_MAX_COIN", defaults.max_coin_value),
+        rival_mission_contest=_env_float(
+            "GL_CFG_RIVAL_CONTEST", defaults.rival_mission_contest
+        ),
+        mission_urgency_divisor=_env_float(
+            "GL_CFG_MISSION_DIVISOR", defaults.mission_urgency_divisor
+        ),
+    )
 
 
 @dataclass(frozen=True)

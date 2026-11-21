@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
@@ -24,6 +25,47 @@ class BookConfig:
 
 
 DEFAULT_BOOK_CONFIG = BookConfig()
+
+
+def _env_float(name: str, default: float) -> float:
+    """Read a float setting, or keep the default when the variable is unset."""
+    raw = os.environ.get(name)
+    if raw is None or raw.strip() == "":
+        return default
+    return float(raw)
+
+
+def _env_int(name: str, default: int) -> int:
+    """Read an integer setting, or keep the default when the variable is unset."""
+    raw = os.environ.get(name)
+    if raw is None or raw.strip() == "":
+        return default
+    return int(raw)
+
+
+def _env_ratios(default: tuple[float, ...]) -> tuple[float, ...]:
+    """Read comma-separated opening bid ratios, or keep the default."""
+    raw = os.environ.get("GL_CFG_OPENING_RATIOS")
+    if raw is None or raw.strip() == "":
+        return default
+    return tuple(float(part) for part in raw.split(","))
+
+
+def book_from_env() -> BookConfig:
+    """Build the bid-book settings from GL_CFG_* variables.
+
+    Unset variables keep today's defaults. See pricing_from_env for why the
+    search passes numbers through the environment.
+    """
+    defaults = DEFAULT_BOOK_CONFIG
+    return BookConfig(
+        opening_ratios=_env_ratios(defaults.opening_ratios),
+        opening_weight=_env_float("GL_CFG_OPENING_WEIGHT", defaults.opening_weight),
+        opening_drop_after=_env_int("GL_CFG_OPENING_DROP", defaults.opening_drop_after),
+        max_records=_env_int("GL_CFG_MAX_RECORDS", defaults.max_records),
+        table_weight=_env_float("GL_CFG_TABLE_WEIGHT", defaults.table_weight),
+        seat_weight=_env_float("GL_CFG_SEAT_WEIGHT", defaults.seat_weight),
+    )
 
 
 @dataclass(frozen=True)

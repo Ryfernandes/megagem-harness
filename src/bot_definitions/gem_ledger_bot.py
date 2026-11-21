@@ -29,6 +29,7 @@ from collections.abc import Mapping
 from bot_definitions.gem_ledger_book import (
     DEFAULT_BOOK_CONFIG,
     OpponentBidBook,
+    book_from_env,
     choose_optimal_bid,
 )
 from bot_definitions.gem_ledger_pricing import (
@@ -36,17 +37,42 @@ from bot_definitions.gem_ledger_pricing import (
     PricingConfig,
     build_market_context,
     evaluate_auction_terms,
+    pricing_from_env,
     select_reveal_index,
 )
 from bots import Bot, BotInfo, RoundResult
+
+
+def default_settings_environment() -> dict[str, str]:
+    """Environment variables that reproduce today's GemLedgerBot numbers.
+
+    A search script copies this dictionary, changes one value, and puts it in
+    the environment before starting a game.
+    """
+    pricing = DEFAULT_PRICING
+    book = DEFAULT_BOOK_CONFIG
+    return {
+        "GL_CFG_COIN_SCARCITY": str(pricing.coin_scarcity_gain),
+        "GL_CFG_ENDGAME_GEMS": str(pricing.endgame_gem_threshold),
+        "GL_CFG_ENDGAME_FLOOR": str(pricing.endgame_premium_floor),
+        "GL_CFG_MAX_COIN": str(pricing.max_coin_value),
+        "GL_CFG_RIVAL_CONTEST": str(pricing.rival_mission_contest),
+        "GL_CFG_MISSION_DIVISOR": str(pricing.mission_urgency_divisor),
+        "GL_CFG_OPENING_RATIOS": ",".join(str(ratio) for ratio in book.opening_ratios),
+        "GL_CFG_OPENING_WEIGHT": str(book.opening_weight),
+        "GL_CFG_OPENING_DROP": str(book.opening_drop_after),
+        "GL_CFG_MAX_RECORDS": str(book.max_records),
+        "GL_CFG_TABLE_WEIGHT": str(book.table_weight),
+        "GL_CFG_SEAT_WEIGHT": str(book.seat_weight),
+    }
 
 
 class GemLedgerBot(Bot):
     """Best-response bidder driven by exact gem expectations and a live bid ledger."""
 
     def __init__(self) -> None:
-        self.pricing: PricingConfig = DEFAULT_PRICING
-        self.book: OpponentBidBook = OpponentBidBook(DEFAULT_BOOK_CONFIG)
+        self.pricing: PricingConfig = pricing_from_env()
+        self.book: OpponentBidBook = OpponentBidBook(book_from_env())
 
     def on_game_start(self) -> None:
         self.book.start_new_game()
