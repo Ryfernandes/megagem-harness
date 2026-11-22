@@ -58,6 +58,7 @@ def default_settings_environment() -> dict[str, str]:
         "GL_CFG_MAX_COIN": str(pricing.max_coin_value),
         "GL_CFG_RIVAL_CONTEST": str(pricing.rival_mission_contest),
         "GL_CFG_MISSION_DIVISOR": str(pricing.mission_urgency_divisor),
+        "GL_CFG_INVEST_LOCKUP": str(pricing.invest_lockup_cost),
         "GL_CFG_OPENING_RATIOS": ",".join(str(ratio) for ratio in book.opening_ratios),
         "GL_CFG_OPENING_WEIGHT": str(book.opening_weight),
         "GL_CFG_OPENING_DROP": str(book.opening_drop_after),

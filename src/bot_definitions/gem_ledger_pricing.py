@@ -23,6 +23,10 @@ class PricingConfig:
     max_coin_value: float = 2.0
     rival_mission_contest: float = 0.5
     mission_urgency_divisor: float = 10.0
+    # Extra opportunity cost per coin locked in an investment.  The bid is
+    # refunded at scoring, so this is only the value of keeping the coins
+    # available for later auctions.
+    invest_lockup_cost: float = 0.0
 
 
 DEFAULT_PRICING = PricingConfig()
@@ -68,6 +72,9 @@ def pricing_from_env() -> PricingConfig:
         ),
         mission_urgency_divisor=_env_float(
             "GL_CFG_MISSION_DIVISOR", defaults.mission_urgency_divisor
+        ),
+        invest_lockup_cost=_env_float(
+            "GL_CFG_INVEST_LOCKUP", defaults.invest_lockup_cost
         ),
     )
 
@@ -328,7 +335,10 @@ def evaluate_auction_terms(
 
     if card.type is AuctionType.INVEST:
         gross_value = float(card.value)
-        coin_cost = coin_val - 1.0
+        # The bid comes back at scoring, so only the lock-up matters.  A
+        # positive lock-up cost makes the bot demand a reserve before tying
+        # coins up that later auctions could use.
+        coin_cost = coin_val - 1.0 + cfg.invest_lockup_cost
     elif card.type is AuctionType.LOAN:
         gross_value = (coin_val - 1.0) * card.value
         coin_cost = coin_val
