@@ -1,7 +1,8 @@
 """UltimateBot: play a different specialist for each chart and table size.
 
-This is the tournament entry. MicahBot, GemLedgerBot, and GemLedgerReserveBot
-live in this folder as the specialists it calls. They are not separate entries.
+This is the tournament entry. MicahBot, GemLedgerBot, GemLedgerReserveBot,
+and GemLedgerA5Bot live in this folder as the specialists it calls. They are
+not separate entries.
 
 Before the first decision, the bot reads the value chart and the player count
 and hands the rest of the game to the specialist that scored the most points
@@ -11,8 +12,11 @@ on that kind of table:
   spends extra only late, when blocking someone can change first place.
   It plays chart A with 3 players, charts B and C, and chart E with 3 players.
 - GemLedgerBot uses those gem prices, keeps a bid ledger for each seat, and
-  chooses which hidden gem to reveal. It plays chart A with 4 or 5 players
-  and chart D with 3 players.
+  chooses which hidden gem to reveal. It plays chart A with 4 players and
+  chart D with 3 players.
+- GemLedgerA5Bot is GemLedger with a lower coin scarcity gain, a 2.5 point
+  coin-value cap, and no endgame taper. It plays chart A with 5 players,
+  where ordinary GemLedger was losing to YaleBot.
 - GemLedgerReserveBot is GemLedger on the cheaper charts. On charts D and E
   it saves coins: an investment is no longer treated as free, and one coin
   can be worth up to 2.5 points. It plays chart D with 4 or 5 players and
@@ -33,6 +37,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 
+from bot_definitions.gem_ledger_a5_bot import GemLedgerA5Bot
 from bot_definitions.gem_ledger_bot import GemLedgerBot
 from bot_definitions.gem_ledger_reserve_bot import GemLedgerReserveBot
 from bot_definitions.micah_bot import MicahBot
@@ -41,18 +46,20 @@ from bots import Bot, BotInfo, GameSummary, RoundResult
 MICAH = "micah"
 LEDGER = "ledger"
 RESERVE = "reserve"
+A5 = "a5"
 
 DELEGATE_CLASSES: dict[str, type[Bot]] = {
     MICAH: MicahBot,
     LEDGER: GemLedgerBot,
     RESERVE: GemLedgerReserveBot,
+    A5: GemLedgerA5Bot,
 }
 
 # Best specialist per (value chart, player count), measured in local games.
 DELEGATE_BY_COMBO: dict[tuple[str, int], str] = {
     ("A", 3): MICAH,
     ("A", 4): LEDGER,
-    ("A", 5): LEDGER,
+    ("A", 5): A5,
     ("B", 3): MICAH,
     ("B", 4): MICAH,
     ("B", 5): MICAH,

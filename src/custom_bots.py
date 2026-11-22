@@ -1,7 +1,7 @@
 """Bots the CLI can load by name.
 
 This submission enters one tournament bot: UltimateBot. It calls MicahBot,
-GemLedgerBot, and GemLedgerReserveBot. Those three classes stay in
+GemLedgerBot, GemLedgerReserveBot, and GemLedgerA5Bot. Those classes stay in
 bot_definitions so UltimateBot can use them. They are not separate entries.
 
 SmallBidBot is the example that came with the harness. It is not a
