@@ -20,6 +20,9 @@ Each round follows three steps:
    - Reveals the hidden gem that best shifts future gem valuations downward
      for colors we still need on public missions and upward for colors the
      wealthiest opponent still needs.
+
+Contributors:
+    Micah
 """
 
 from __future__ import annotations
