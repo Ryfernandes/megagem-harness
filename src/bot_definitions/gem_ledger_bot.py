@@ -21,6 +21,9 @@ Each round follows three steps:
      for colors we still need on public missions and upward for colors the
      wealthiest opponent still needs.
 
+UltimateBot is the tournament entry. This class is one of the specialists
+it calls. It is not a separate submission.
+
 Contributors:
     Micah
 """

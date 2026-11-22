@@ -15,6 +15,9 @@ coin locked in an investment costs one extra point. Charts A, B, and C use
 GemLedger's prices unchanged. Raising the cap further, or charging the
 reserve on every chart, gave away lots that GemLedger was already winning.
 
+UltimateBot is the tournament entry. This class is one of the specialists
+it calls. It is not a separate submission.
+
 Contributors:
     Micah
 """

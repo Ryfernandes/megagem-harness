@@ -1,23 +1,17 @@
 """Bots the CLI can load by name.
 
-This team submits three tournament bots:
-
-- MicahBot
-- GemLedgerBot
-- GemLedgerReserveBot
+This submission enters one tournament bot: UltimateBot. It calls MicahBot,
+GemLedgerBot, and GemLedgerReserveBot. Those three classes stay in
+bot_definitions so UltimateBot can use them. They are not separate entries.
 
 SmallBidBot is the example that came with the harness. It is not a
 tournament entry.
 """
 
-from bot_definitions.gem_ledger_bot import GemLedgerBot
-from bot_definitions.gem_ledger_reserve_bot import GemLedgerReserveBot
-from bot_definitions.micah_bot import MicahBot
 from bot_definitions.small_bid_bot import SmallBidBot
+from bot_definitions.ultimate_bot import UltimateBot
 
 __all__ = [
-    "GemLedgerBot",
-    "GemLedgerReserveBot",
-    "MicahBot",
     "SmallBidBot",
+    "UltimateBot",
 ]

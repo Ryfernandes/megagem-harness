@@ -37,6 +37,9 @@ Strategy:
        futures. The same random worlds are used for every candidate. The
        search stops inside ``timeout_seconds``.
 
+UltimateBot is the tournament entry. This class is one of the specialists
+it calls. It is not a separate submission.
+
 Contributors:
     Micah
 """

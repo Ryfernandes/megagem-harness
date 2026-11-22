@@ -1,11 +1,32 @@
-"""UltimateBot: pick the best submitted teammate for each chart and table size.
+"""UltimateBot: play a different specialist for each chart and table size.
 
-This is an experiment, not a tournament submission. It keeps only the chosen
-specialist alive for the current game and forwards every callback to it, so the
-worker checkpoint stays close to the size of a single submitted bot.
+This is the tournament entry. MicahBot, GemLedgerBot, and GemLedgerReserveBot
+live in this folder as the specialists it calls. They are not separate entries.
 
-The mapping below is filled from local tournament results. Until a combination
-has its own entry, the per-chart default is used, then MicahBot.
+Before the first decision, the bot reads the value chart and the player count
+and hands the rest of the game to the specialist that scored the most points
+on that kind of table:
+
+- MicahBot prices each gem from the chart, learns how opponents bid, and
+  spends extra only late, when blocking someone can change first place.
+  It plays chart A with 3 players, charts B and C, and chart E with 3 players.
+- GemLedgerBot uses those gem prices, keeps a bid ledger for each seat, and
+  chooses which hidden gem to reveal. It plays chart A with 4 or 5 players
+  and chart D with 3 players.
+- GemLedgerReserveBot is GemLedger on the cheaper charts. On charts D and E
+  it saves coins: an investment is no longer treated as free, and one coin
+  can be worth up to 2.5 points. It plays chart D with 4 or 5 players and
+  chart E with 4 or 5 players.
+
+Only the chosen specialist is kept for that game. GemLedger's table-wide bid
+notes can carry into the next game when GemLedger is chosen again. Switching
+to a different specialist starts that one fresh.
+
+The table below comes from local games. If a chart shows up with some other
+player count, the chart's usual specialist is used, and otherwise MicahBot.
+
+Contributors:
+    Micah
 """
 
 from __future__ import annotations
@@ -31,7 +52,7 @@ DELEGATE_CLASSES: dict[str, type[Bot]] = {
 DELEGATE_BY_COMBO: dict[tuple[str, int], str] = {
     ("A", 3): MICAH,
     ("A", 4): LEDGER,
-    ("A", 5): MICAH,
+    ("A", 5): LEDGER,
     ("B", 3): MICAH,
     ("B", 4): MICAH,
     ("B", 5): MICAH,
@@ -59,7 +80,7 @@ DEFAULT_DELEGATE = MICAH
 
 
 class UltimateBot(Bot):
-    """Delegate each game to the teammate that wins most often on that table."""
+    """Hand each game to the specialist that scores the most on that table."""
 
     def __init__(self) -> None:
         self.delegate: Bot | None = None
