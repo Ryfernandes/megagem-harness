@@ -17,7 +17,7 @@ from lib import AuctionCard, MissionCard, ValueChart
 class PricingConfig:
     """Tuning parameters for coin scarcity, mission races, and reveal weighting."""
 
-    coin_scarcity_gain: float = 4.0
+    coin_scarcity_gain: float = 6.0
     endgame_gem_threshold: int = 8
     endgame_premium_floor: float = 0.35
     max_coin_value: float = 2.0
