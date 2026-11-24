@@ -2,7 +2,9 @@
 
 Self-contained (standard library and harness modules only). The first half is
 the shared Megagem logic (gem-value beliefs, mission value, coin pricing,
-reveals), formerly ``otis_core.py``; the second half is the bot itself.
+reveals); the second half is the bot itself.
+
+Otis Ikpase
 """
 
 from functools import lru_cache
@@ -367,8 +369,7 @@ _PRICE_EMA = 0.2
 
 
 class MarketReader(Bot):
-    # Version 2. Core settings (tuned by arena/tune.py,
-    # see results/tuned_mr_full_*.json):
+    # Core settings tuned over multiple games.
     #   lam0/lam_min/kappa  coin premium schedule      delta  value shading
     #   rho  mission progress credit   prior_weight/decay  opponent model
     # Optional parts, each off at the value shown in brackets:
