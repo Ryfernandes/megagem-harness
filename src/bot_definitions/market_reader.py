@@ -1,10 +1,13 @@
 """Market Reader: model each opponent's bids, then bid just enough.
 
-Self-contained (standard library and harness modules only). The first half is
-the shared Megagem logic (gem-value beliefs, mission value, coin pricing,
+It is built upon the foundation of a tuned bot that bids a certain percentage of the expected value of the lot, plus a premium for coins that can be spent or locked. 
+In later rounds it models how each opponent bids, and infers what they might hold in their hidden hand. It then bids just enough to win the lot, or not at all if it is not worth it.
+It also chooses which hidden gem to reveal, and can optionally use a look-ahead to estimate the value of future lots and the expected price of gems.
+
+The first half is the shared Megagem logic (gem-value beliefs, mission value, coin pricing,
 reveals); the second half is the bot itself.
 
-Otis Ikpase
+Contributors: Otis Ikpase
 """
 
 from functools import lru_cache
@@ -471,7 +474,7 @@ class MarketReader(Bot):
     def _scales(self, v: View, info: BotInfo, p: dict) -> dict:
         """Per-opponent (absolute scale, value scale, legal cap) for this lot."""
         out = {}
-        public = public_color_values(info) if v.kind == "treasure" else None
+        public = public_color_values(info) if v.kind == "treasure" else []
         for opp in info.other_players:
             if v.kind == "treasure":
                 coll = tuple(opp.won_gems.get(g, 0) for g in STANDARD_GEMS)
